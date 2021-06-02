@@ -44,14 +44,16 @@
 ## **Identifying Table Relationships**
 Before diving straight into solution mode for the business requirements, I took a look at the data with **EDR (Entity-Relationship Diagrams)** to identify different data relationships between tables. The EDR of these datasets can be viewed as below:
 
-
+<p align="center">
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/EDR-full.png" width=100% height=100%>
+</p>
 
 <br /> 
 
 Next, I named each step of the travel journey starting from **```dvd_rentals.rental```** to **```dvd_rentals.actor```** table labeled as 1 to 7 to have a bettwe view of the data connection, as the image below:
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/EDR.png" width=100% height=100%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/EDR.png" width=70% height=70%>
 </p>
 
 ---
