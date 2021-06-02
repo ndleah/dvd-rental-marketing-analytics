@@ -44,7 +44,7 @@
 ## **Identifying Table Relationships**
 Before diving straight into solution mode for the business requirements, I took a look at the data with **EDR (Entity-Relationship Diagrams)** to identify different data relationships between tables. The EDR of these datasets can be viewed as below:
 
-<iframe width="560" height="315" src='https://dbdiagram.io/embed/5fe1cb6e9a6c525a03bbf839'> </iframe>
+
 
 <br /> 
 
