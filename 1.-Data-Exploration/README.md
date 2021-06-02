@@ -665,7 +665,7 @@ There is an overlap of **4,580 unique** **```inventory_id```** **foreign key val
 Now that I've covered **part 1** of the data exploration before joining table. Phew! We nailed it guys. This was a super long process and it just feel like forever. But hold up, **there will more to come** :D ```*screaming in SQL*```
 
 
-For **part 2, 3** and **4**, I repeated each steps of the data exploration journey from **part 1**. However, in this document, let's end the section here because it's gonna be super long if I decided to list all the repeated steps here (Also, it's because I'm lazy...)
+For **part 2, 3** and **4**, I repeated each steps of the data exploration journey from **part 1**. However, in this document, let's end the section here because it's gonna be super long if I decided to list all the repeated steps here (Also because I'm lazy...)
 
 However, you can find all the code and answers for part 2, 3 and 4 within this folder as well:
 
