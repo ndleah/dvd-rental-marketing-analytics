@@ -43,7 +43,7 @@
 
 ---
 ## **Identifying Table Relationships**
-Before diving straight into solution mode for the business requirements, I took a look at the data with **EDR (Entity-Relationship Diagrams)** to identify different data relationships between tables. The EDR of these datasets can be viewed as below:
+Before diving straight into solution mode for the business requirements, I need to take a look at the data with **EDR (Entity-Relationship Diagrams)** to identify different data relationships between tables. The EDR of these datasets can be viewed as below:
 
 <p align="center">
 <img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/ERD-full.png" width=100% height=100%>
@@ -51,7 +51,7 @@ Before diving straight into solution mode for the business requirements, I took 
 
 <br /> 
 
-Next, I named each step of the travel journey starting from **```dvd_rentals.rental```** to **```dvd_rentals.actor```** table labeled as 1 to 7 to have a bettwe view of the data connection, as the image below:
+Next, I named each step of the travel journey starting from **```dvd_rentals.rental```** to **```dvd_rentals.actor```** table labeled as 1 to 7 to have a better view of the data connection, as the image below:
 
 <p align="center">
 <img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/EDR.png" width=70% height=70%>
@@ -60,7 +60,7 @@ Next, I named each step of the travel journey starting from **```dvd_rentals.ren
 ---
 
 ## **Idetifying Key Columns**
-Next, in order to generate each customer insight for answering questions, I found out that the following inputs were needed: 
+In order to generate each customer insight for answering questions, I found out that the following inputs was needed: 
 
   * **```category_name```**: The name of the top 2 ranking categories
   * **```rental_count```**: How many total films have they watched in this category?
@@ -117,22 +117,22 @@ So here is the final version of our 4 part table joining journey itinerary:
 In short, let's imagine our data exploration journey broken down into different parts as illustrated below: 
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/DE-P1.png" width=70% height=70%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/DE-P1.png" width=50% height=50%>
 </p>
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/DE-P2.png" width=70% height=70%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/DE-P2.png" width=50% height=50%>
 </p>
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/DE-P3.png" width=70% height=70%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/DE-P3.png" width=50% height=50%>
 </p>
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/DE-P4.png" width=70% height=70%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/DE-P4.png" width=50% height=50%>
 </p>
 
-With those information - the start and end points of my data joining journey were defined. The next important step is to figure out how to combine our data to get these two fields together in the same SQL table output!
+With those information - the start and end points of my data joining journey are defined. The next important step is to figure out how to combine our data to get these two fields together in the same SQL table output!
 
 ---
 
@@ -160,7 +160,7 @@ In order to do this, I would need to:
 
 > Keep all of the customer rental records from **rental table** and match up each record with its equivalent **```film_id```** value from the **inventory table**.
 
-Now that I got the purpose for joining data tables. However, there were a few unknowns that needed to address as I was going to match the **```inventory_id```** foreign key between the rental and inventory tables:
+Ok, so now that I got the purpose for joining data tables. However, there were a few unknowns that needed to address as I was going to match the **```inventory_id```** foreign key between the rental and inventory tables:
 1. **How many records exist per **```inventory_id```** value in rental or inventory tables?** 
 2. **How many **overlapping** and **missing unique foreign** key values are there between the two tables?**
 
@@ -180,7 +180,7 @@ There are 3 possible hypotheses for this question:
 * [**Hypothesis 3:** There will be multiple **```inventory_id```** records per unique **```film_id```** value in the **```dvd_rentals.inventory```** table](#h3-there-will-be-multiple-inventory_id-records-per-unique-film_id-value-in-the-dvd_rentalsinventory-table)
 
 
-Thus, I conducted tests on these assumptions to verify the results.
+Thus, I will conduct tests on these assumptions to verify the results.
 
 ---
  ### **a. Validating Hypotheses** 
@@ -676,7 +676,7 @@ However, you can find all the code and answers for part 2, 3 and 4 within this f
 <img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/DE-P2.png" width=70% height=70%>
 </p>
 
-[![View P2](https://img.shields.io/badge/view%20P2-here-blue)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration/DE-P2.sql)
+[![View P2](https://img.shields.io/badge/view%20P2-here-blue?style=for-the-badge&logo=GITHUB)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration/DE-P2.sql)
 
 ---
 
@@ -685,7 +685,7 @@ However, you can find all the code and answers for part 2, 3 and 4 within this f
 <img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/DE-P3.png" width=70% height=70%>
 </p>
 
-[![View P3](https://img.shields.io/badge/view%20P3-here-brightgreen)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration/DE-P3.sql)
+[![View P3](https://img.shields.io/badge/view%20P3-here-brightgreen?style=for-the-badge&logo=GITHUB)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration/DE-P3.sql)
 
 ---
 
@@ -694,7 +694,7 @@ However, you can find all the code and answers for part 2, 3 and 4 within this f
 <img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/DE-P4.png" width=70% height=70%>
 </p>
 
-[![View P4](https://img.shields.io/badge/view%20P2-here-yellow)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration/DE-P4.sql)
+[![View P4](https://img.shields.io/badge/view%20P2-here-yellow?style=for-the-badge&logo=GITHUB)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration/DE-P4.sql)
 
 ---
 
