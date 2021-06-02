@@ -18,6 +18,9 @@
   <img src="https://forthebadge.com/images/badges/check-it-out.svg">
 </p>
 
+ <br /> 
+
+
 <p align="center">
 <img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/intro-cover.gif" width=100% height=100%>
 
@@ -41,23 +44,38 @@ This case study is contained within the [Serious SQL](https://www.datawithdanny.
 
 # Key Business Requirements
 The marketing team have shared with us a draft of the email they wish to send to their customers:
+
+ <br /> 
+
+
 <p align="center">
 <img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/email-template.png" width=60% height=60%>
+
+ <br /> 
 
 ## Requirement #1 📍
 * **Top 2 Categories**
 
 For each customer, we need to identify the top 2 categories   each customer based off their past rental history. 
+
+ <br /> 
+
 <p align="center">
 <img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-1.gif" width=60% height=60%>
 
+ <br /> 
 
 ## Requirement #2 📍
 * **Category Film Recommendations**
 
 The marketing team has also requested for the 3 most popular films for each customer’s top 2 categories.
+
+ <br /> 
+
 <p align="center">
 <img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-2.gif" width=60% height=60%>
+
+ <br /> 
 
 ## Requirement #3 & #4 📍
 * **Individual Customer Insights**
@@ -75,13 +93,19 @@ For the second ranking category **```(requirement 4)```**:
 1. How many total films has the customer watched in this category?
 2. What proportion of each customer’s total films watched does this count make?
 
+ <br /> 
+
 <p align="center">
 <img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-3-4.gif" width=60% height=60%>
+
+ <br /> 
 
 ## Requirement #5 📍
 * **Favorite Actor Recommendations**
 
 Along with the top 2 categories, marketing has also requested top actor film recommendations where **up to 3 more films are included in the recommendations list as well as the count of films by the top actor.**
+
+ <br /> 
 
 <p align="center">
 <img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-5.gif" width=60% height=60%>
