@@ -3,6 +3,7 @@
 [![View Main Folder](https://img.shields.io/badge/View-Main_Folder-red?)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main)
 [![View Repositories](https://img.shields.io/badge/View-My_Repositories-blue?logo=GitHub)](https://github.com/nduongthucanh?tab=repositories)
 [![View My Profile](https://img.shields.io/badge/View-My_Profile-green?logo=GitHub)](https://github.com/nduongthucanh)
+
 # **[SERIOUS SQL: MARKETING ANALYTICS CASE STUDY](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis)**
 
 # Data Overview - Data Exploration
@@ -46,6 +47,10 @@ Before diving straight into solution mode for the business requirements, I took 
 <iframe height="400" width="100%"
 src='https://dbdiagram.io/embed/5fe1cb6e9a6c525a03bbf839'>
 </iframe>
+
+<p align="center">
+<iframe src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/EDR.png" width=100% height=100%>
+</p>
 
 <br /> 
 
