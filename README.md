@@ -42,7 +42,7 @@ This case study is contained within the [Serious SQL](https://www.datawithdanny.
 # Key Business Requirements
 The marketing team have shared with us a draft of the email they wish to send to their customers:
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/email-template.png" width=100% height=100%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/email-template.png" width=60% height=60%>
 
 ## Requirement #1 📍
 * **Top 2 Categories**
