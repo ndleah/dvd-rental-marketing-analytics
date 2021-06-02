@@ -49,7 +49,7 @@ The marketing team have shared with us a draft of the email they wish to send to
 
 For each customer, we need to identify the top 2 categories   each customer based off their past rental history. 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-1.gif" width=100% height=100%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-1.gif" width=60% height=60%>
 
 
 ## Requirement #2 📍
@@ -57,7 +57,7 @@ For each customer, we need to identify the top 2 categories   each customer base
 
 The marketing team has also requested for the 3 most popular films for each customer’s top 2 categories.
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-2.gif" width=100% height=100%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-2.gif" width=60% height=60%>
 
 ## Requirement #3 & #4 📍
 * **Individual Customer Insights**
@@ -76,7 +76,7 @@ For the second ranking category **```(requirement 4)```**:
 2. What proportion of each customer’s total films watched does this count make?
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-3-4.gif" width=100% height=100%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-3-4.gif" width=60% height=60%>
 
 ## Requirement #5 📍
 * **Favorite Actor Recommendations**
@@ -84,7 +84,7 @@ For the second ranking category **```(requirement 4)```**:
 Along with the top 2 categories, marketing has also requested top actor film recommendations where **up to 3 more films are included in the recommendations list as well as the count of films by the top actor.**
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-5.gif" width=100% height=100%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-5.gif" width=60% height=60%>
 
  <br /> 
 

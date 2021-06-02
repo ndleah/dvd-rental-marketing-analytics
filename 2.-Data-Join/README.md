@@ -9,7 +9,7 @@
 # Data Overview - Data Join
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/table-join.gif" width=100% height=100%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/table-join.gif" width=60% height=60%>
 </p>
 
 ## **JOIN TABLE**
