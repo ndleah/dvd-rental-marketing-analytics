@@ -49,7 +49,7 @@ src='https://dbdiagram.io/embed/5fe1cb6e9a6c525a03bbf839'>
 </iframe>
 
 <p align="center">
-<iframe src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/EDR.png" width=100% height=100%>
+<iframe src="https://dbdiagram.io/embed/5fe1cb6e9a6c525a03bbf839" width=100% height=100%>
 </p>
 
 <br /> 
