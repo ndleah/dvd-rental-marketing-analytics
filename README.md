@@ -160,5 +160,7 @@ Along with the top 2 categories, marketing has also requested top actor film rec
 
  <br /> 
 
-# Key Highlights
-*[updating]*
+
+___________________________________
+
+<p>&copy; 2021 Leah Nguyen</p>
