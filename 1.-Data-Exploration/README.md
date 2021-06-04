@@ -21,7 +21,7 @@
 
 3. [Identifying Start & End Points](#Identifying-Start-&-End-Points)
 
-4. [Start With The First](#-Start-With-The-First)
+4. [Start With The First](#Start-With-The-First)
    * [Inspecting The Table Values](#Inspecting-The-Table-Values)
       
       a. [Validating Hypotheses](#a.-Validating-Hypotheses)
@@ -32,14 +32,14 @@
       
       d. [Foreign Key Overlap Analysis](#d.-Foreign-Key-Overlap-Analysis)
 
-      e. [Joint Foreign Keys](e.-Joint-Foreign-Keys)
+      e. [Joint Foreign Keys](#e-joint-foreign-keys)
       
-      f. [Implemening The Joins](f.-Implemening-The-Joins)
+      f. [Implemening The Joins](#f-implementing-the-joins)
    * [Summary](#Summary)
 
-5. [Returning To The Data Exploration Journey](#-**Returning-To-The-Data-Exploration-Journey**)
+5. [Returning To The Data Exploration Journey](#Returning-To-The-Data-Exploration-Journey)
 
-6. [Next Steps](#-Next-Steps)
+6. [Next Steps](#Next-Steps)
 
 ---
 ## Identifying Table Relationships
