@@ -30,7 +30,7 @@ This case study is contained within the [Serious SQL](https://www.datawithdanny.
    * [Key Business Requirements](#Key-Business-Requirements)
    * [Data Overview](#data-overview)
      * [Data Exploration](#data-exploration)
-     * [Data Join](#data-exploration)
+     * [Data Join](#data-join)
    * [Solution](#solutions)
    * [Result](#result)
    * [Bonus Section](#bonus-section)
@@ -52,7 +52,7 @@ The marketing team have shared with us a draft of the email they wish to send to
 
  <br /> 
 
-## Requirement #1 📍
+## Requirement #1
 * **Top 2 Categories**
 
 For each customer, we need to identify the top 2 categories   each customer based off their past rental history. 
@@ -64,7 +64,7 @@ For each customer, we need to identify the top 2 categories   each customer base
 
  <br /> 
 
-## Requirement #2 📍
+## Requirement #2
 * **Category Film Recommendations**
 
 The marketing team has also requested for the 3 most popular films for each customer’s top 2 categories.
@@ -76,7 +76,7 @@ The marketing team has also requested for the 3 most popular films for each cust
 
  <br /> 
 
-## Requirement #3 & #4 📍
+## Requirement #3 & #4
 * **Individual Customer Insights**
 
 The number of films watched by each customer in their **top 2 categories** is required as well as some specific insights.
@@ -99,7 +99,7 @@ For the second ranking category **```(requirement 4)```**:
 
  <br /> 
 
-## Requirement #5 📍
+## Requirement #5
 * **Favorite Actor Recommendations**
 
 Along with the top 2 categories, marketing has also requested top actor film recommendations where **up to 3 more films are included in the recommendations list as well as the count of films by the top actor.**
@@ -117,25 +117,31 @@ Along with the top 2 categories, marketing has also requested top actor film rec
 > 
 > Therefore, the first section will cover the data inspection process of these tables in order to find out the best JOIN type that will be the most suitable for the later problem solving stage.
 
-<p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/sc-dep1.gif" width=100% height=100%>
-
 ## View the entire solution for this part [**here**](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration) or
 [![View Data Exploration Folder](https://img.shields.io/badge/View-Data_Exploration_Folder-red?style=for-the-badge&logo=GITHUB)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration)
 
+**Preview:**
+
+<p align="center">
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/sc-dep1.gif" width=100% height=100%>
+
  <br /> 
+
+---
 
 ## **Data Join**
 
 > Now that we’ve identified the key columns and highlighted some things we need to keep in mind when performing some table joins for our data analysis - next exciting step is to join them together.
 
-<p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/sc-dep2.gif" width=100% height=100%>
-
 ## View the entire solution for this part [**here**](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/2.-Data-Join) or
 [![View Data Join Folder](https://img.shields.io/badge/View-Data_Join_Folder-red?style=for-the-badge&logo=GITHUB)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/2.-Data-Join)
 
  <br /> 
+
+**Preview:**
+
+<p align="center">
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/sc-dep2.gif" width=100% height=100%>
 
 
 # Solutions
