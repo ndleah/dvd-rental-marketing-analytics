@@ -17,29 +17,29 @@
 <!--ts-->
 1. [Identifying table relationships](#Identifying-Table-Relationships)
    
-2. [Idetifying key columns](##Idetifying-Key-Columns)
+2. [Idetifying key columns](#Idetifying-Key-Columns)
 
-3. [Identifying Start & End Points](#Identifying-Start-&-End-Points)
+3. [Identifying Start & End Points](#identifying-start--end-points)
 
-4. [Start With The First](#Start-With-The-First)
-   * [Inspecting The Table Values](#Inspecting-The-Table-Values)
+4. [Start With The First](#start-with-the-first)
+   * [Inspecting The Table Values](#inspecting-the-table-values)
       
-      a. [Validating Hypotheses](#a.-Validating-Hypotheses)
+      a. [Validating Hypotheses](#a-validating-hypotheses)
       
-      b. [Hypotheses Summary](#b.-Hypotheses-Summary)
+      b. [Hypotheses Summary](#b-hypotheses-summary)
       
-      c. [Foreign Keys Distribution Analysis](#c.-Foreign-Keys-Distribution-Analysis)
+      c. [Foreign Keys Distribution Analysis](#c-foreign-keys-distribution-analysis)
       
-      d. [Foreign Key Overlap Analysis](#d.-Foreign-Key-Overlap-Analysis)
+      d. [Foreign Key Overlap Analysis](#d-foreign-key-overlap-analysis)
 
       e. [Joint Foreign Keys](#e-joint-foreign-keys)
       
       f. [Implemening The Joins](#f-implementing-the-joins)
    * [Summary](#Summary)
 
-5. [Returning To The Data Exploration Journey](#Returning-To-The-Data-Exploration-Journey)
+5. [Returning To The Data Exploration Journey](#returning-to-the-data-exploration-journey)
 
-6. [Next Steps](#Next-Steps)
+6. [Next Steps](#next-steps)
 
 ---
 ## Identifying Table Relationships
