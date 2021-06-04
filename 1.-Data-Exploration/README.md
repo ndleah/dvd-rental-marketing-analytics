@@ -13,36 +13,36 @@
 <img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/data-exploration.gif" width=60% height=60%>
 </p>
 
-## **Table of contents**
+## Table of contents
 <!--ts-->
-**1.** [**Identifying table relationships**](#**Identifying-Table-Relationships**)
+1. [Identifying table relationships](#Identifying-Table-Relationships)
    
-**2.** [**Idetifying key columns**](##**Idetifying-Key-Columns**)
+2. [Idetifying key columns](##Idetifying-Key-Columns)
 
-**3.** [**Identifying Start & End Points**](#**Identifying-Start-&-End-Points**)
+3. [Identifying Start & End Points](#Identifying-Start-&-End-Points)
 
-**4.** [**Start With The First**](#-**Start-With-The-First**)
-   * [Inspecting The Table Values](#**Inspecting-The-Table-Values**)
+4. [Start With The First](#-Start-With-The-First)
+   * [Inspecting The Table Values](#Inspecting-The-Table-Values)
       
-      **a.** [Validating Hypotheses](#a.-Validating-Hypotheses)
+      a. [Validating Hypotheses](#a.-Validating-Hypotheses)
       
-      **b.** [Hypotheses Summary](#b.-Hypotheses-Summary)
+      b. [Hypotheses Summary](#b.-Hypotheses-Summary)
       
-      **c.** [Foreign Keys Distribution Analysis](#c.-Foreign-Keys-Distribution-Analysis)
+      c. [Foreign Keys Distribution Analysis](#c.-Foreign-Keys-Distribution-Analysis)
       
-      **d.** [Foreign Key Overlap Analysis](#d.-Foreign-Key-Overlap-Analysis)
+      d. [Foreign Key Overlap Analysis](#d.-Foreign-Key-Overlap-Analysis)
 
-      **e.** [Joint Foreign Keys](e.-Joint-Foreign-Keys)
+      e. [Joint Foreign Keys](e.-Joint-Foreign-Keys)
       
-      **f.** [Implemening The Joins](f.-Implemening-The-Joins)
-   * [Summary](#**Summary**)
+      f. [Implemening The Joins](f.-Implemening-The-Joins)
+   * [Summary](#Summary)
 
-**5.** [**Returning To The Data Exploration Journey**](#-**Returning-To-The-Data-Exploration-Journey**)
+5. [Returning To The Data Exploration Journey](#-**Returning-To-The-Data-Exploration-Journey**)
 
-**6.** [**Next Steps**](#-**Next-Steps**)
+6. [Next Steps](#-Next-Steps)
 
 ---
-## **Identifying Table Relationships**
+## Identifying Table Relationships
 Before diving straight into solution mode for the business requirements, I need to take a look at the data with **EDR (Entity-Relationship Diagrams)** to identify different data relationships between tables. The EDR of these datasets can be viewed as below:
 
 <p align="center">
@@ -59,7 +59,7 @@ Next, I named each step of the travel journey starting from **```dvd_rentals.ren
 
 ---
 
-## **Idetifying Key Columns**
+## Idetifying Key Columns
 In order to generate each customer insight for answering questions, I found out that the following inputs was needed: 
 
   * **```category_name```**: The name of the top 2 ranking categories
@@ -78,7 +78,7 @@ Therefore, I would focus on the columns that needed to generate this all importa
 
 ---
 
- ## **Identifying Start & End Points**
+ ## Identifying Start & End Points
 
 In order to generate datasets required to calculate **```rental_count```** at a **```customer_id```** level, the following information was needed:
   * **```customer_id```**
@@ -136,7 +136,7 @@ With those information - the start and end points of my data joining journey are
 
 ---
 
-## **Start With The First**
+## Start With The First
 
 As can be seen from the data journey within the [4 part table above](#identifying-start--end-points), our data journey first started with the **Part 1** - which will be between the **```rental```** and the **```inventory```** tables:
 
@@ -167,7 +167,7 @@ Ok, so now that I got the purpose for joining data tables. However, there were a
 Therefore, the next important steps was to take a deeper look at two tables values in order to answer the above questions.
 
 ---
-## **Inspecting the table values**
+## Inspecting the table values
 
 
 > 1. **How many records exist per **```inventory_id```** value in rental or inventory tables?**
@@ -183,7 +183,7 @@ There are 3 possible hypotheses for this question:
 Thus, I will conduct tests on these assumptions to verify the results.
 
 ---
- ### **a. Validating Hypotheses** 
+ ### a. Validating Hypotheses 
 
 #### **H1:** The number of unique **```inventory_id```** records will be equal in both **```dvd_rentals.rental```** and **```dvd_rentals.inventory```** tables 
  <br /> 
@@ -299,7 +299,7 @@ I can confirm that there are indeed multiple unique **```inventory_id```** per *
 
 <br /> 
 
-### **b. Hypotheses Summary**
+### b. Hypotheses Summary
 <br /> 
 
 > **1. Hypothesis 1:** The number of unique **```inventory_id```** records will be equal in both **```dvd_rentals.rental```** and **```dvd_rentals.inventory```** tables
@@ -347,7 +347,7 @@ I can confirm that there are indeed multiple unique **```inventory_id```** per *
 
 As I had inspected the two tables in question to validate 3 hypotheses about the data. They key next step was to see how foreign key values are distributed in order to have a further investigation into the raw datasets before considering combining them altogether.
 
-### **c. Foreign Keys Distribution Analysis**
+### c. Foreign Keys Distribution Analysis
 ## Question 2
 
 One of the first places to start inspecting our datasets is to look at **the distribution of foreign key values** in each rental and inventory table used for our join.
@@ -415,7 +415,7 @@ ORDER BY row_counts;
 
  <br /> 
 
-### **d. Foreign Key Overlap Analysis**
+### d. Foreign Key Overlap Analysis
  
 
 ## Question 3
@@ -516,7 +516,7 @@ WHERE NOT EXISTS (
 
 <br /> 
 
-### **e. Joint Foreign Keys**
+### e. Joint Foreign Keys
 
 Since I already identified that all of the **```inventory_id```** values which exist in **```dvd_rentals.rental```** table also exists in the **```dvd_rentals.inventory```** dataset - I can now redraw our venn diagram from before with a representation of what my exact data looks like.
 
@@ -562,7 +562,7 @@ Therefore, one possible hypothesis could be: There are no difference between **`
 
  <br /> 
 
-### **f. Implementing The Join(s)**
+### f. Implementing The Join(s)
 
 Inspect if the **```INNER JOIN```** is the same with **```LEFT JOIN```** or not in this case example:
 
@@ -618,7 +618,7 @@ There is no difference between an **```INNER JOIN```** or **```LEFT JOIN```** fo
 
 ---
 
-# **Summary**
+# Summary
 
 In summary, I have now successfully answered all 3 questions for table join:
 
@@ -656,7 +656,7 @@ There is an overlap of **4,580 unique** **```inventory_id```** **foreign key val
 
 ---
 
-## **Returning To The Data Exploration Journey**
+## Returning To The Data Exploration Journey
 
 <p align="center">
 <img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/done-DE-P1.png" width=70% height=70%>
@@ -698,7 +698,7 @@ However, you can find all the code and answers for part 2, 3 and 4 within this f
 
 ---
 
-## **Next Steps**
+## Next Steps
 
 ### *Thanks for scrolling down until this point. I truly aprriciated your patience reading my project.* :heart:
 
