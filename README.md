@@ -48,7 +48,7 @@ The marketing team have shared with us a draft of the email they wish to send to
 
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/email-template.png" width=60% height=60%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/email-template.png" width=50% height=50%>
 
  <br /> 
 
@@ -60,7 +60,7 @@ For each customer, we need to identify the top 2 categories   each customer base
  <br /> 
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-1.gif" width=60% height=60%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-1.gif" width=50% height=50%>
 
  <br /> 
 
@@ -72,7 +72,7 @@ The marketing team has also requested for the 3 most popular films for each cust
  <br /> 
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-2.gif" width=60% height=60%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-2.gif" width=50% height=50%>
 
  <br /> 
 
@@ -95,7 +95,7 @@ For the second ranking category **```(requirement 4)```**:
  <br /> 
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-3-4.gif" width=60% height=60%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-3-4.gif" width=50% height=50%>
 
  <br /> 
 
@@ -107,7 +107,7 @@ Along with the top 2 categories, marketing has also requested top actor film rec
  <br /> 
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-5.gif" width=60% height=60%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-5.gif" width=50% height=50%>
 
  <br /> 
 
