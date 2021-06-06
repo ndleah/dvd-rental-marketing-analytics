@@ -57,7 +57,7 @@ INNER JOIN dvd_rentals.film
 INNER JOIN dvd_rentals.film_category
   ON film.film_id = film_category.film_id
 INNER JOIN dvd_rentals.category
-  ON film_category.category_id = category.category_id
+  ON film_category.category_id = category.category_id;
 
 --perform group by aggregations on category_name and customer_id
 SELECT
