@@ -2,7 +2,7 @@
 PROBLEM SOLVING:
 
 ////////////////////////
-Requirement 2: Category Film Recommendations
+Requirement 2: Category Recommendations
 **********************/
 --create Film Counts table
 DROP TABLE IF EXISTS film_counts;
