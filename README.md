@@ -249,7 +249,7 @@ Let's assume this email template will be sent to a customer with **```customer_i
 Hooray! This is what out final input looks like:
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/email-template.png" width=50% height=50%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/final-output.png" width=50% height=50%>
 
 # Bonus Section
 *[updating]*
