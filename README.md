@@ -145,15 +145,111 @@ Along with the top 2 categories, marketing has also requested top actor film rec
 
 
 # Solutions
-*[updating]*
+> Finally, after we’ve combined all of our different datasets together into a single base table which we can use for our insights, this section will aim to cover those core calculated fields which we broke down in our first [Key Business Requirements](#Key-Business-Requirements) section of this case study.
+## View the entire solution for this part [**here**](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/3.-Problem-Solving) or
+[![View Data Join Folder](https://img.shields.io/badge/View-Problem_Solving_Folder-red?style=for-the-badge&logo=GITHUB)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/3.-Problem-Solving)
 
  <br /> 
 
+**Preview:**
+
+<p align="center">
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/sc-dep3.gif" width=100% height=100%>
 
 # Result
-*[updating]*
+After successfully generated all the insights needed for this email template, let's go on to the final step of inspecting on how will the final output of the actual email look like when sending it to the end customers. To do this, I'm gonna craft the [draft template](#key-business-requirements) the marketing team has provided us before together with our valuable data found in previous parts.
+
+Let's assume this email template will be sent to a customer with **```customer_id = 1```**. Therefore, I will first go back to the requirements of the marketing team and by that, answer each question one by one regarding this customer's scenerio.
+ <br /> 
+
+## Requirement #1
+* **Top 2 Categories**
+
+**Result:**
+|customer_id|category_name|rental_count|category_rank|
+|-----------|-------------|------------|-------------|
+|1          |Classics     |6           |1            |
+|1          |Comedy       |5           |2            |
 
  <br /> 
+
+**Email Mock-up**:
+<p align="center">
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/template_r1.png" width=70% height=70%>
+
+ <br /> 
+
+## Requirement #2
+* **Category Film Recommendations**
+
+**Result:**
+|customer_id|category_name|category_rank|film_id|title              |rental_count|reco_rank|
+|-----------|-------------|-------------|-------|-------------------|------------|---------|
+|1          |Classics     |1            |891    |TIMBERLAND SKY     |31          |1        |
+|1          |Classics     |1            |358    |TIMBERLAND SKY     |28          |2        |
+|1          |Classics     |1            |951    |VOYAGE LEGALLY     |28          |3        |
+|1          |Comedy       |2            |1000   |ZORRO ARK          |31          |1        |
+|1          |Comedy       |2            |127    |CAT CONEHEADS      |30          |2        |
+|1          |Comedy       |2            |638    |OPERATION OPERATION|27          |3        |
+
+ <br /> 
+
+**Email Mock-up**:
+<p align="center">
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/template_r2.png" width=70% height=70%>
+
+ <br /> 
+
+## Requirement #3 & #4
+* **Individual Customer Insights**
+
+**Result:**
+
+**```FIRST CATEGORY INSIGHTS```**
+
+|customer_id|category_name|rental_count|average_comparison|percentile         |
+|-----------|-------------|------------|------------------|-------------------|
+|1          |Classics     |6           |4                 |1                  |
+
+**```SECOND CATEGORY INSIGHTS```**
+|customer_id|category_name|rental_count|category_percentage|
+|-----------|-------------|------------|-------------------|
+|1          |Comedy       |5           |16                 |
+ 
+ <br /> 
+
+**Email Mock-up**:
+
+<p align="center">
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/template_r3-4.png" width=70% height=70%>
+
+ <br /> 
+
+## Requirement #5
+* **Favorite Actor Recommendations**
+
+**Result:**
+
+|customer_id|first_name|last_name|rental_count|title                 |film_id|actor_id|reco_rank|
+|-----------|----------|---------|------------|----------------------|-------|--------|---------|
+|1          |VAL       |BOLGER   |6           |PRIMARY GLASS         |697    |37      |1        |
+|1          |VAL       |BOLGER   |6           |ALASKA PHANTOM        |12     |37      |2        |
+|1          |VAL       |BOLGER   |6           |METROPOLIS COMA       |572    |37      |3        |
+
+ <br /> 
+
+**Email Mock-up**:
+
+<p align="center">
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/template_r5.png" width=70% height=70%>
+
+ <br /> 
+
+ ## Final Output
+Hooray! This is what out final input looks like:
+
+<p align="center">
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/email-template.png" width=50% height=50%>
 
 # Bonus Section
 *[updating]*
