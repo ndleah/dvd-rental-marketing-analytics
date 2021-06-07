@@ -175,7 +175,7 @@ Let's assume this email template will be sent to a customer with **```customer_i
 
 **Email Mock-up**:
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/template_r1.png" width=70% height=70%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/template_r1.png" width=50% height=50%>
 
  <br /> 
 
@@ -196,7 +196,7 @@ Let's assume this email template will be sent to a customer with **```customer_i
 
 **Email Mock-up**:
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/template_r2.png" width=70% height=70%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/template_r2.png" width=50% height=50%>
 
  <br /> 
 
@@ -221,7 +221,7 @@ Let's assume this email template will be sent to a customer with **```customer_i
 **Email Mock-up**:
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/template_r3-4.png" width=70% height=70%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/template_r3-4.png" width=50% height=50%>
 
  <br /> 
 
@@ -241,7 +241,7 @@ Let's assume this email template will be sent to a customer with **```customer_i
 **Email Mock-up**:
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/template_r5.png" width=70% height=70%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/template_r5.png" width=50% height=50%>
 
  <br /> 
 
