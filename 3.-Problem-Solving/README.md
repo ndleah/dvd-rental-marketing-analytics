@@ -922,9 +922,7 @@ LIMIT 5;
 
 ## Next Steps
 
-<br /> 
-
-### **We have completed the final stage of our data analysis in this project, now let's go back to the main folder to see the final otput of the email template (customer_id = 1)**
+### **Hooray! We have completed the final stage of the data analysis in this project, now let's go back to the main folder to see the final otput of the email template (customer_id = 1)**
 
 <br /> 
 
