@@ -54,9 +54,9 @@ LIMIT 10;
 <--- (**THE END OF THE QUERY**) 
 */
 
---create Customer Rental Count table (for customer 1 as an example)
-DROP TABLE IF EXISTS category_rental_counts;
-CREATE TEMP TABLE category_rental_counts AS
+--create Category Counts table (for customer 1 as an example)
+DROP TABLE IF EXISTS category_counts;
+CREATE TEMP TABLE category_counts AS
 SELECT
   customer_id,
   category_name,
@@ -68,7 +68,7 @@ GROUP BY
   category_name;
 --profile just customer_id = 1 values sorted by desc rental_count
 SELECT *
-FROM category_rental_counts
+FROM category_counts
 WHERE customer_id = 1
 ORDER BY rental_count DESC;
 
@@ -92,16 +92,16 @@ ORDER BY rental_count DESC;
 */
 
 --create TOTAL Customer Rentals table
-DROP TABLE IF EXISTS customer_total_rentals;
-CREATE TEMP TABLE customer_total_rentals AS
+DROP TABLE IF EXISTS total_counts;
+CREATE TEMP TABLE total_counts AS
 SELECT
   customer_id,
   SUM(rental_count) AS total_rental_count
-FROM category_rental_counts
+FROM category_counts
 GROUP BY customer_id;
 ---- profile just first 5 customers sorted by ID as an illustration
 SELECT *
-FROM customer_total_rentals
+FROM total_counts
 WHERE customer_id <= 5
 ORDER BY customer_id;
 
@@ -115,157 +115,38 @@ ORDER BY customer_id;
 |5          |38       |
 */
 
---create Average Category Rental Counts
-DROP TABLE IF EXISTS average_category_rental_counts;
-CREATE TEMP TABLE average_category_rental_counts AS
-SELECT
-  category_name,
-  FLOOR(AVG(rental_count)) AS avg_rental_count
-FROM category_rental_counts
-GROUP BY category_name;
-
-SELECT *
-FROM average_category_rental_counts
-ORDER BY category_name;
-
-/* Result:
-|category_name|avg_rental_count|
-|-------------|----------------|
-|Action       |2               |
-|Animation    |2               |
-|Children     |1               |
-|Classics     |2               |
-|Comedy       |1               |
-|Documentary  |2               |
-|Drama        |2               |
-|Family       |2               |
-|Foreign      |2               |
-|Games        |2               |
-|Horror       |1               |
-|Music        |1               |
-|New          |2               |
-|Sci-Fi       |2               |
-|Sports       |2               |
-|Travel       |1               |
-
-
-*/
---calculate the percentile values
-DROP TABLE IF EXISTS customer_category_percentiles;
-CREATE TEMP TABLE customer_category_percentiles AS
-SELECT
-  customer_id,
-  category_name,
-      CEILING(
-      100 * PERCENT_RANK() OVER (
-      PARTITION BY category_name
-      ORDER BY rental_count DESC
-      )
-  ) AS percentile
-FROM category_rental_counts;
---profile just customer_id = 1 values with the top 2 categories sorted as an result illustration
-SELECT *
-FROM customer_category_percentiles
-WHERE customer_id = 1
-ORDER BY percentile
-LIMIT 2;
-
-/*Result:
-|customer_id|category_name|percentile|
-|-----------|-------------|----------|
-|1          |Classics     |1         |
-|1          |Comedy       |1         |
-*/
-
-/*///////////////////////////////////
-
-FINDING:
-For customer 1: You’ve watched 6 Classics
-films, that’s 4 more than the DVD Rental
-Coaverage and puts you in the top 1% 
-of Classics gurus!
-
-///////////////////////////////////*/
-
---Joining our temporary tables
-
-DROP TABLE IF EXISTS customer_category_joint_table;
-CREATE TEMP TABLE customer_category_joint_table AS
-SELECT
-  t1.customer_id,
-  t1.category_name,
-  t1.rental_count,
-  t1.latest_rental_date,
-  t2.total_rental_count,
-  t3.avg_rental_count,
-  t4.percentile,
-  t1.rental_count - t3.avg_rental_count AS average_comparison,
-  ROUND(100 * t1.rental_count / t2.total_rental_count) AS category_percentage
-FROM category_rental_counts AS t1
-INNER JOIN customer_total_rentals AS t2
-  ON t1.customer_id = t2.customer_id
-INNER JOIN average_category_rental_counts AS t3
-  ON t1.category_name = t3.category_name
-INNER JOIN customer_category_percentiles AS t4
-  ON t1.customer_id = t4.customer_id
-  AND t1.category_name = t4.category_name;
-  
---inspect customer = 1 rows sorted by percentile
-SELECT *
-FROM customer_category_joint_table
-WHERE customer_id = 1
-ORDER BY percentile
-LIMIT 5;
-
-/*Result:
-|customer_id|category_name|rental_count|latest_rental_date|total_rental_count|avg_rental_count|percentile|average_comparison|category_percentage|
-|-----------|-------------|------------|------------------|------------------|----------------|----------|------------------|-------------------|
-|1          |Comedy       |5           |2005-08-22T19:41:37.000Z|32                |1               |1         |4                 |16                 |
-|1          |Classics     |6           |2005-08-19T09:55:16.000Z|32                |2               |1         |4                 |19                 |
-|1          |Drama        |4           |2005-08-18T03:57:29.000Z|32                |2               |3         |2                 |13                 |
-|1          |Music        |2           |2005-07-09T16:38:01.000Z|32                |1               |21        |1                 |6                  |
-|1          |New          |2           |2005-08-19T13:56:54.000Z|32                |2               |27        |0                 |6                  |
-*/
-
---create top 2 category table
-DROP TABLE IF EXISTS top_categories_information;
-CREATE TEMP TABLE top_categories_information AS (
-WITH ordered_customer_category_joint_table AS (
+--create Top Categories table
+DROP TABLE IF EXISTS top_categories;
+CREATE TEMP TABLE top_categories AS
+WITH ranked_cte AS (
   SELECT
-  customer_id,
-  ROW_NUMBER() OVER (
+    customer_id,
+    category_name,
+    rental_count,
+    DENSE_RANK() OVER (
     PARTITION BY customer_id
     ORDER BY 
       rental_count DESC,
-      latest_rental_date DESC
-    ) AS category_ranking,
-    category_name,
-    rental_count,
-    average_comparison,
-    percentile,
-    category_percentage
-  FROM customer_category_joint_table
-  )
--- filter out top 2 rows from the CTE for final output  
+      latest_rental_date DESC,
+      category_name
+    ) AS category_rank
+  FROM category_counts
+)
 SELECT *
-FROM ordered_customer_category_joint_table
-WHERE category_ranking <= 2
-);
+FROM ranked_cte
+WHERE category_rank <= 2;
+--inspect the first 3 customer_id
+SELECT *
+FROM top_categories
+LIMIT 6;
 
--- inspect the result for the first 3 customers
-SELECT * FROM top_categories_information
-WHERE customer_id IN (1, 2, 3)
-ORDER BY 
-  customer_id, 
-  category_ranking;
-  
-/* Result:
-|customer_id|category_ranking|category_name|rental_count|average_comparison|percentile|category_percentage|
-|-----------|----------------|-------------|------------|------------------|----------|-------------------|
-|1          |1               |Classics     |6           |4                 |1         |19                 |
-|1          |2               |Comedy       |5           |4                 |1         |16                 |
-|2          |1               |Sports       |5           |3                 |3         |19                 |
-|2          |2               |Classics     |4           |2                 |2         |15                 |
-|3          |1               |Action       |4           |2                 |5         |15                 |
-|3          |2               |Sci-Fi       |3           |1                 |15        |12                 |
+/*Result:
+|customer_id|category_name|rental_count|category_rank|
+|-----------|-------------|------------|-------------|
+|1          |Classics     |6           |1            |
+|1          |Comedy       |5           |2            |
+|2          |Sports       |5           |1            |
+|2          |Classics     |4           |2            |
+|3          |Action       |4           |1            |
+|3          |Sci-Fi       |3           |2            |
 */
