@@ -90,9 +90,9 @@ In order to generate datasets required to calculate **```rental_count```** at a 
 <img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/EDR.png" width=70% height=70%>
 </p>
 
- However, if going back to the EDR review, I also noticed that the **```dvd_rentals.rental```** table was the only place where our **```customer_id```** field exists and the **```dvd_rentals.category```** table was the only table which I can get values of **```category_name```** field.
+ However, if going back to the EDR review, I also noticed that the **```dvd_rentals.rental```** table was the only place where my **```customer_id```** field exists and the **```dvd_rentals.category```** table was the only table which I can get values of **```category_name```** field.
 
-Thus, we need to somehow connect all the data dots from tables starting from **```dvd_rentals.rental```** labeled as **number 1** all the way through to table **number 5** - **```dvd_rentals.category```**. 
+Thus, I need to somehow connect all the data dots from tables starting from **```dvd_rentals.rental```** labeled as **number 1** all the way through to table **number 5** - **```dvd_rentals.category```**. 
 
  <p align="center">
 <img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/EDR(2).png" width=70% height=70%>
@@ -102,7 +102,7 @@ Thus, we need to somehow connect all the data dots from tables starting from **`
 
 In order to do that, identifying the **foreign keys** as the common ground for table joining, or in other words, the route from the start **(rental table)** to our final destination **(inventory table)**, is a must!
 
-So here is the final version of our 4 part table joining journey itinerary:
+So here is the final version of my 4 part table joining journey itinerary:
 
 
 |Join Journey Part|Start              |End                |Foreign Key       |
@@ -114,22 +114,22 @@ So here is the final version of our 4 part table joining journey itinerary:
 
 <br /> 
 
-In short, let's imagine our data exploration journey broken down into different parts as illustrated below: 
+In short, let's imagine my data exploration journey broken down into different parts as illustrated below: 
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/DE-P1.png" width=50% height=50%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/DE-P1.png" width=70% height=70%>
 </p>
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/DE-P2.png" width=50% height=50%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/DE-P2.png" width=70% height=70%>
 </p>
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/DE-P3.png" width=50% height=50%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/DE-P3.png" width=70% height=70%>
 </p>
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/DE-P4.png" width=50% height=50%>
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/DE-P4.png" width=70% height=70%>
 </p>
 
 With those information - the start and end points of my data joining journey are defined. The next important step is to figure out how to combine our data to get these two fields together in the same SQL table output!
@@ -138,7 +138,7 @@ With those information - the start and end points of my data joining journey are
 
 ## Start With The First
 
-As can be seen from the data journey within the [4 part table above](#identifying-start--end-points), our data journey first started with the **Part 1** - which will be between the **```rental```** and the **```inventory```** tables:
+As can be seen from the data journey within the [4 part table above](#identifying-start--end-points), my data journey first started with the **Part 1** - which will be between the **```rental```** and the **```inventory```** tables:
 
 <p align="center">
 <img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/DE-P1.png" width=70% height=70%>
@@ -345,12 +345,12 @@ I can confirm that there are indeed multiple unique **```inventory_id```** per *
 **3.2 CONCLUSION**: ```VALID HYPOTHESIS [TRUE]```
 <br /> 
 
-As I had inspected the two tables in question to validate 3 hypotheses about the data. They key next step was to see how foreign key values are distributed in order to have a further investigation into the raw datasets before considering combining them altogether.
+As I had inspected the two tables in question to validate 3 hypotheses about the data, the key next step was to see how foreign key values are distributed in order to have a further investigation into the raw datasets.
 
 ### c. Foreign Keys Distribution Analysis
 ## Question 2
 
-One of the first places to start inspecting our datasets is to look at **the distribution of foreign key values** in each rental and inventory table used for our join.
+One of the first places to start inspecting my datasets is to look at **the distribution of foreign key values** in each rental and inventory table used for my join.
 
 * **TABLE 1:** **```dvd_rentals.rental```**
 ```sql
@@ -555,7 +555,7 @@ WHERE i.inventory_id IS NOT NULL;
 
 **FINDING:**
 
-I noticed that this number was actually the same with what I had caculated for the distinct counts for the **```dvd_rentals.rental```** table from above!
+I noticed that this number was actually the same with what I had calculated for the distinct counts for the **```dvd_rentals.rental```** table from above!
 
 Therefore, one possible hypothesis could be: There are no difference between **```INNER JOIN```** and **```LEFT JOIN```** in this case example. Let's find out the truth for our hypothesis that will be covered in next steps.
 
@@ -624,7 +624,7 @@ In summary, I have now successfully answered all 3 questions for table join:
 
 **1. What is the purpose of joining these two tables?**
 
-> We need to keep all of the customer rental records from dvd_rentals.rental and match up each record with its equivalent **```film_id```** value from the **```dvd_rentals.inventory```** table.
+> I need to keep all of the customer rental records from **```dvd_rentals.rental```** and match up each record with its equivalent **```film_id```** value from the **```dvd_rentals.inventory```** table.
 
 **2. What is the distribution of foreign keys within each table?**
 > There is a **1-to-many relationship** between the **```inventory_id```** and the rows of the **```dvd_rentals.rental```** table
@@ -639,7 +639,7 @@ In summary, I have now successfully answered all 3 questions for table join:
 
  <br /> 
 
-> There is a **1-to-1 relationship** between the inventory_id and the rows of the dvd_rentals.inventory table
+> There is a **1-to-1 relationship** between the **```inventory_id```** and the rows of the **```dvd_rentals.inventory```** table
 
 |row_counts|count_of_fk_values|
 |----------|------------------|
@@ -700,7 +700,7 @@ However, you can find all the code and answers for part 2, 3 and 4 within this f
 
 ## Next Steps
 
-### *Thanks for scrolling down until this point. I truly aprriciated your patience reading my project.* :heart:
+### *Thanks for reading and scrolling down until this point. I truly aprriciated your patience!* :heart:
 
 <br /> 
 
