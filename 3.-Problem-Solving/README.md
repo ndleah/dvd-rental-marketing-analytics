@@ -27,7 +27,7 @@
 ## Solution Plan
 ## R1: Top 2 Categories
 ### **1. Category Counts**
-After creating a **```complete_joint_dataset_with_rental_date```** which joins multiple tables together after analysing the relationships between each table, I then created a follow-up table which uses the **```complete_joint_dataset_with_rental_date```** to aggregate our data and generate a rental_count for our ranking purposes downstream.
+After creating a **```complete_joint_dataset_with_rental_date```** which joins multiple tables together after analysing the relationships between each table, I then created a follow-up table which uses the **```complete_joint_dataset_with_rental_date```** to aggregate our data and generate a **```rental_count```** for our ranking purposes downstream.
 
 ```sql
 DROP TABLE IF EXISTS category_counts;
@@ -162,7 +162,7 @@ LIMIT 5;
 
 
 ### **2. Category Film Exclusions**
-For the next step in our recommendation analysis - we will need to generate a table with all of our customer’s previously watched films so we don’t recommend them something which they’ve already seen before.
+For the next step in our recommendation analysis - I will need to generate a table with all of our customer’s previously watched films so we don’t recommend them something which they’ve already seen before.
 
 ```sql
 DROP TABLE IF EXISTS category_film_exclusions;
@@ -269,7 +269,7 @@ Your expertly chosen recommendations:
 
 ## R3, R4: Top 2 Category Insights
 ### **1. Average Category Rental Counts**
-Next we will need to use the **```category_counts```** table to generate the average aggregated rental count for each category rounded down to the nearest integer using the **```FLOOR```** function
+Next I will need to use the **```category_counts```** table to generate the average aggregated rental count for each category rounded down to the nearest integer using the **```FLOOR```** function
 
 ```sql
 DROP TABLE IF EXISTS average_category_count;
@@ -366,6 +366,7 @@ LIMIT 10;
 
 ### **3. Category Joint Table**
 To easily extract all the necessary information for my later calculations regarding insights for the top 2 categories, I joined all the query of my previous temp tables above into 1 table only. Note that this table only contains the top 2 categories information and not the rest:
+
 ```sql
 DROP TABLE IF EXISTS customer_category_joint_table;
 CREATE TEMP TABLE customer_category_joint_table AS
@@ -579,7 +580,7 @@ LIMIT 10;
 |408        |3        |2005-05-24T23:03:39.000Z|373    |GRADUATE LORD  |140     |WHOOPI    |HURT     |
 
 ### **2. Top Actor Counts**
-We can now generate our rental counts per actor and since we are only interested in the top actor for each of our customers - we can also perform a filter step to just keep the top actor records and counts for our downstream insights:
+I can now generate our rental counts per actor and since I'm only interested in the top actor for each of customers:
 ```sql
 DROP TABLE IF EXISTS top_actor_counts;
 CREATE TEMP TABLE top_actor_counts AS
@@ -640,7 +641,7 @@ LIMIT 10;
 |10         |12      |KARL      |BERRY    |4           |
 
 ### **3. Top Actor Film Counts**
-I need to generate aggregated total rental counts across all customers by **```actor_id```** and **```film_id```** so I can join onto our **```top_actor_counts```** table
+I need to generate aggregated total rental counts across all customers by **```actor_id```** and **```film_id```** so I can join onto our **```top_actor_counts```** table:
 
 
 ```sql
@@ -682,7 +683,7 @@ LIMIT 10;
 |1      |198     |ACADEMY DINOSAUR|23          |
 
 ### **4. Actor Film Exclusions**
-I can perform the same steps I used to create the **```category_film_exclusions```** table - however I also need to **```UNION```** the exclusions with the relevant category recommendations that I have already given our customers.
+I will perform the same steps I used to create the **```category_film_exclusions```** table - however I also need to **```UNION```** the exclusions with the relevant category recommendations that I have already given our customers.
 
 The rationale behind this - customers would not want to receive a recommendation for the same film twice in the same email!
 ```sql
@@ -724,7 +725,6 @@ LIMIT 10;
 
 ### **5. Final Actor Recommendations**
 Finally we are up to the last hurdle of our analysis stage!
-
 
 ```sql
 DROP TABLE IF EXISTS actor_recommendations;
