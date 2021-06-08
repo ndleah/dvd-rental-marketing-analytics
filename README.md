@@ -42,7 +42,7 @@ This case study is contained within the [Serious SQL](https://www.datawithdanny.
 
 
 # Key Business Requirements
-The marketing team have shared with us a draft of the email they wish to send to their customers:
+The marketing team have shared with me a draft of the email they wish to send to their customers:
 
  <br /> 
 
@@ -55,7 +55,7 @@ The marketing team have shared with us a draft of the email they wish to send to
 ## Requirement #1
 * **Top 2 Categories**
 
-For each customer, we need to identify the top 2 categories   each customer based off their past rental history. 
+For each customer, I need to identify the top 2 categories each customer based off their past rental history. 
 
  <br /> 
 
@@ -113,7 +113,7 @@ Along with the top 2 categories, marketing has also requested top actor film rec
 
 # Data Overview
 ## **Data Exploration**
-> In this project, we have a total of 7 tables in our ERD (Entity Relationship Diagram), highlighting the important columns which we should use to join our tables for our data analysis task. 
+> In this project, I have a total of 7 tables in our ERD (Entity Relationship Diagram), highlighting the important columns which I should use to join my tables for the data analysis task. 
 > 
 > Therefore, the first section will cover the data inspection process of these tables in order to find out the best JOIN type that will be the most suitable for the later problem solving stage.
 
@@ -131,7 +131,7 @@ Along with the top 2 categories, marketing has also requested top actor film rec
 
 ## **Data Join**
 
-> Now that we’ve identified the key columns and highlighted some things we need to keep in mind when performing some table joins for our data analysis - next exciting step is to join them together.
+> Now that I’ve identified the key columns and highlighted some things I need to keep in mind when performing some table joins for my data analysis - next exciting step is to join them together.
 
 ## View the entire solution for this part [**here**](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/2.-Data-Join) or
 [![View Data Join Folder](https://img.shields.io/badge/View-Data_Join_Folder-red?style=for-the-badge&logo=GITHUB)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/2.-Data-Join)
@@ -145,7 +145,7 @@ Along with the top 2 categories, marketing has also requested top actor film rec
 
 
 # Solutions
-> Finally, after we’ve combined all of our different datasets together into a single base table which we can use for our insights, this section will aim to cover those core calculated fields which we broke down in our first [Key Business Requirements](#Key-Business-Requirements) section of this case study.
+> Finally, after I’ve combined all of different datasets together into a single base table which I can use for our insights, this section will aim to cover those core calculated fields which I broke down in the first [Key Business Requirements](#Key-Business-Requirements) section of this case study.
 ## View the entire solution for this part [**here**](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/3.-Problem-Solving) or
 [![View Data Join Folder](https://img.shields.io/badge/View-Problem_Solving_Folder-red?style=for-the-badge&logo=GITHUB)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/3.-Problem-Solving)
 
@@ -157,9 +157,9 @@ Along with the top 2 categories, marketing has also requested top actor film rec
 <img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/sc-dep3.gif" width=100% height=100%>
 
 # Result
-After successfully generated all the insights needed for this email template, let's go on to the final step of inspecting on how will the final output of the actual email look like when sending it to the end customers. To do this, I'm gonna craft the [draft template](#key-business-requirements) the marketing team has provided us before together with our valuable data found in previous parts.
+okay so now I've successfully generated all the insights needed for this email template, let's go on to the final step to inspect the final output appearance of the actual email when sending it to the end customers. To do this, I'm gonna craft together the [draft template](#key-business-requirements) the marketing team has already provided with our valuable data found in previous parts.
 
-Let's assume this email template will be sent to a customer with **```customer_id = 1```**. Therefore, I will first go back to the requirements of the marketing team and by that, answer each question one by one regarding this customer's scenerio.
+Let's assume this email template will be sent to a customer with **```customer_id = 1```**. Therefore, I will first go back to the requirements of the marketing team and by that, answer each question one by one regarding this customer's scenario.
  <br /> 
 
 ## Requirement #1
@@ -246,13 +246,35 @@ Let's assume this email template will be sent to a customer with **```customer_i
  <br /> 
 
  ## Final Output
-Hooray! This is what out final input looks like:
+Hooray! Finally, this is what out final input looks like:
 
 <p align="center">
 <img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/final-output.png" width=50% height=50%>
 
 # Bonus Section
-*[updating]*
+
+<p align="center">
+<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/The_Office_GIF.gif" width=60% height=60%>
+
+The following questions are part of this case study - these are example questions the Marketing team might be interested in as a bonus section which cover more in-depth insights of the email template!
+
+1. Which film title was the most recommended for all customers?
+2. How many customers were included in the email campaign?
+3. Out of all the possible films - what percentage coverage do we have in our recommendations?
+4. What is the most popular top category?
+5. What is the 4th most popular top category?
+6. What is the average percentile ranking for each customer in their top category rounded to the nearest 2 decimal places?
+7. What is the cumulative distribution of the top 5 percentile values for the top category from the first_category_insights table rounded to the nearest round percentage?
+8. What is the median of the second category percentage of entire viewing history?
+9. What is the 80th percentile of films watched featuring each customer’s favourite actor?
+10. What was the average number of films watched by each customer?
+11. What is the top combination of top 2 categories and how many customers if the order is relevant (e.g. Horror and Drama is a different combination to Drama and Horror)
+12. Which actor was the most popular for all customers?
+13. How many films on average had customers already seen that feature their favourite actor rounded to closest integer?
+14. What is the most common top categories combination if order was irrelevant and how many customers have this combination? (e.g. Horror and Drama is a the same as Drama and Horror)
+
+## View the entire solution for this part [**here**](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/3.-Problem-Solving) or
+[![View Data Join Folder](https://img.shields.io/badge/View-Bonus_Section_Folder-green?style=for-the-badge&logo=GITHUB)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/4.-Bonus-Section)
 
  <br /> 
 
