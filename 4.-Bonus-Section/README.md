@@ -19,10 +19,48 @@ The following questions are part of this case study - these are example question
 ## Solutions
 
 ### **Q1: Which film title was the most recommended for all customers?**
+```sql
+DROP TABLE IF EXISTS film_recommendations;
+CREATE TEMP TABLE film_recommendations AS
+SELECT 
+  title,
+  film_id,
+  COUNT(*) AS film_count
+FROM top_category_recommendations
+GROUP BY 
+  title,
+  film_id
+  ORDER BY film_count DESC;
+
+SELECT * 
+FROM film_recommendations
+LIMIT 5;
+```
+**Result:**
+|title            |film_id|film_count|
+|-----------------|-------|----------|
+|DOGMA FAMILY     |239    |102       |
+|JUGGLER HARDLY   |489    |100       |
+|STORM HAPPINESS  |849    |100       |
+|TALENTED HOMICIDE|875    |92        |
+|ROSES TREASURE   |745    |91        |
+
+**Answer:** DOGMA FAMILY 
 
 ---
 
 ### **Q2: How many customers were included in the email campaign?**
+```sql
+SELECT
+  COUNT(DISTINCT customer_id)
+FROM dvd_rentals.rental;
+```
+**Result:**
+|count            |
+|-----------------|
+|599              |
+
+**Answer:** 599
 
 ---
 
