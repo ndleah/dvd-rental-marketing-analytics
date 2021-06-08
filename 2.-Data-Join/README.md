@@ -66,7 +66,7 @@ SELECT * FROM complete_joint_dataset limit 10;
 
 ## **DEALING WITH TIES**
 
-In order to avoid matching ```**rental_count**``` values, which often refered as "ties", in the same top category ranking, it is neccessary to include 1 more column into our joint dataset as an additional condition for ties dealing.
+In order to avoid matching **```rental_count```** values, which often refered as "ties", in the same top category ranking, it is neccessary to include 1 more column into our joint dataset as an additional condition for ties dealing.
 
 In this case study, I will use the latest **```rental date```** as a additional determination if there is any tie that happened in our analysis.
 
@@ -139,7 +139,7 @@ The result look just great for me now, which mean that we can end this part here
 
 View The Next Part: [![View Problem Solving Folder](https://img.shields.io/badge/View-Problem_Solving_Folder-red?)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/3.-Problem-Solving)
 
-Have you viewed the 1st part yet? Take a look here: [![View Data Join Folder](https://img.shields.io/badge/View-Data_Join_Folder-red?)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/2.-Data-Join)
+Have you viewed the 1st part yet? Take a look here: [![View Data Exploration Folder](https://img.shields.io/badge/View-Data_Exploration_Folder-red?)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration)
 
 Come back to main folder: [![View Main Folder](https://img.shields.io/badge/View-Main_Folder-red?)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main)
 
