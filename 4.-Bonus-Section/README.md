@@ -16,8 +16,6 @@
 
 The following questions are part of this case study - these are example questions the Marketing team might be interested in as a bonus section which cover more in-depth insights of the email template!
 
- <br /> 
-
 ## Solutions
 
 ### **Q1: Which film title was the most recommended for all customers?**
