@@ -34,7 +34,6 @@ This case study is contained within the [Serious SQL](https://www.datawithdanny.
    * [Solution](#solutions)
    * [Result](#result)
    * [Bonus Section](#bonus-section)
-   * [Key Highlights](#key-highlights)
 <!--te-->
 
 
@@ -264,7 +263,7 @@ The following questions are part of this case study - these are example question
 4. What is the most popular top category?
 5. What is the 4th most popular top category?
 6. What is the average percentile ranking for each customer in their top category rounded to the nearest 2 decimal places?
-7. What is the cumulative distribution of the top 5 percentile values for the top category from the first_category_insights table rounded to the nearest round percentage?
+7. What is the cumulative distribution of the top 5 percentile values for the top category from the **```first_category_insights```** table rounded to the nearest round percentage?
 8. What is the median of the second category percentage of entire viewing history?
 9. What is the 80th percentile of films watched featuring each customer’s favourite actor?
 10. What was the average number of films watched by each customer?
