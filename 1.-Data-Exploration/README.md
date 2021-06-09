@@ -700,7 +700,7 @@ However, you can find all the code and answers for part 2, 3 and 4 within this f
 
 ## Next Steps
 
-### *Thanks for reading and scrolling down until this point. I truly aprriciated your patience!* :heart:
+### *Thanks for reading and scrolling down until this point. I truly aprreciated your patience!* :heart:
 
 <br /> 
 
