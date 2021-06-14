@@ -11,7 +11,7 @@ CREATE TEMP TABLE average_category_count AS
 SELECT
   category_name,
   FLOOR(AVG(rental_count)) AS avg_rental_count
-FROM category_rental_counts
+FROM category_counts
 GROUP BY category_name;
 
 SELECT *
