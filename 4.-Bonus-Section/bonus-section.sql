@@ -102,6 +102,15 @@ FROM second_category_insights;
 --Q9: What is the 80th percentile of films watched featuring each customer’s favourite actor?
 
 --Q10: What was the average number of films watched by each customer?
+SELECT
+ROUND(AVG(total_rental_count)) AS avg_rental_count
+FROM total_counts;
+
+/*Result:
+|avg_rental_count|
+|----------------|
+|27              |
+*/
 
 --Q11: What is the top combination of top 2 categories and how many customers if the order is relevant (e.g. Horror and Drama is a different combination to Drama and Horror)
 
