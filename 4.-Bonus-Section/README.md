@@ -165,7 +165,19 @@ FROM second_category_insights;
 ---
 
 ### **Q10: What was the average number of films watched by each customer?**
-*Updating*
+```sql
+SELECT
+ROUND(AVG(total_rental_count)) AS avg_rental_count
+FROM total_counts;
+```
+
+/*Result:
+|avg_rental_count|
+|----------------|
+|27              |
+*/
+
+**Answer:** 27
 
 ---
 
