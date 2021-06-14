@@ -171,11 +171,11 @@ ROUND(AVG(total_rental_count)) AS avg_rental_count
 FROM total_counts;
 ```
 
-/*Result:
+**Result:**
 |avg_rental_count|
 |----------------|
 |27              |
-*/
+
 
 **Answer:** 27
 
