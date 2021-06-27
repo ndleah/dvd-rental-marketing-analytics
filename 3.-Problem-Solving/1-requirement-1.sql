@@ -72,24 +72,22 @@ FROM category_counts
 WHERE customer_id = 1
 ORDER BY rental_count DESC;
 
-/*Result:
-|customer_id|category_name|rental_count|latest_rental_date      |
-|-----------|-------------|------------|------------------------|
-|1          |Classics     |6           |2005-08-19T09:55:16.000Z|
-|1          |Comedy       |5           |2005-08-22T19:41:37.000Z|
-|1          |Drama        |4           |2005-08-18T03:57:29.000Z|
-|1          |Sci-Fi       |2           |2005-08-21T23:33:57.000Z|
-|1          |Animation    |2           |2005-08-22T20:03:46.000Z|
-|1          |Sports       |2           |2005-07-08T07:33:56.000Z|
-|1          |Music        |2           |2005-07-09T16:38:01.000Z|
-|1          |Action       |2           |2005-08-17T12:37:54.000Z|
-|1          |New          |2           |2005-08-19T13:56:54.000Z|
-|1          |Travel       |1           |2005-07-11T10:13:46.000Z|
-|1          |Family       |1           |2005-08-02T18:01:38.000Z|
-|1          |Documentary  |1           |2005-08-01T08:51:04.000Z|
-|1          |Games        |1           |2005-07-08T03:17:05.000Z|
-|1          |Foreign      |1           |2005-07-28T16:18:23.000Z|
-*/
+--Result:
++──────────────+────────────────+───────────────+───────────────────────────+
+| customer_id  | category_name  | rental_count  | latest_rental_date        |
++──────────────+────────────────+───────────────+───────────────────────────+
+| 1            | Classics       | 6             | 2005-08-19T09:55:16.000Z  |
+| 1            | Comedy         | 5             | 2005-08-22T19:41:37.000Z  |
+| 1            | Drama          | 4             | 2005-08-18T03:57:29.000Z  |
+| 1            | Animation      | 2             | 2005-08-22T20:03:46.000Z  |
+| 1            | Sci-Fi         | 2             | 2005-08-21T23:33:57.000Z  |
+| 1            | New            | 2             | 2005-08-19T13:56:54.000Z  |
+| 1            | Action         | 2             | 2005-08-17T12:37:54.000Z  |
+| 1            | Music          | 2             | 2005-07-09T16:38:01.000Z  |
+| 1            | Sports         | 2             | 2005-07-08T07:33:56.000Z  |
+| 1            | Family         | 1             | 2005-08-02T18:01:38.000Z  |
++──────────────+────────────────+───────────────+───────────────────────────+
+
 
 --create TOTAL Customer Rentals table
 DROP TABLE IF EXISTS total_counts;
@@ -105,15 +103,16 @@ FROM total_counts
 WHERE customer_id <= 5
 ORDER BY customer_id;
 
-/*Result:
-|customer_id|sum      |
-|-----------|---------|
-|1          |32       |
-|2          |27       |
-|3          |26       |
-|4          |22       |
-|5          |38       |
-*/
+--Result:
++──────────────+──────+
+| customer_id  | sum  |
++──────────────+──────+
+| 1            | 32   |
+| 2            | 27   |
+| 3            | 26   |
+| 4            | 22   |
+| 5            | 38   |
++──────────────+──────+
 
 --create Top Categories table
 DROP TABLE IF EXISTS top_categories;
@@ -140,13 +139,16 @@ SELECT *
 FROM top_categories
 LIMIT 6;
 
-/*Result:
-|customer_id|category_name|rental_count|category_rank|
-|-----------|-------------|------------|-------------|
-|1          |Classics     |6           |1            |
-|1          |Comedy       |5           |2            |
-|2          |Sports       |5           |1            |
-|2          |Classics     |4           |2            |
-|3          |Action       |4           |1            |
-|3          |Sci-Fi       |3           |2            |
-*/
+--Result:
++──────────────+────────────────+───────────────+────────────────+
+| customer_id  | category_name  | rental_count  | category_rank  |
++──────────────+────────────────+───────────────+────────────────+
+| 1            | Classics       | 6             | 1              |
+| 1            | Comedy         | 5             | 2              |
+| 2            | Sports         | 5             | 1              |
+| 2            | Classics       | 4             | 2              |
+| 3            | Action         | 4             | 1              |
+| 3            | Sci-Fi         | 3             | 2              |
++──────────────+────────────────+───────────────+────────────────+
+
+

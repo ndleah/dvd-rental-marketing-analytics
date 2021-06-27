@@ -18,28 +18,28 @@ SELECT *
 FROM average_category_count
 ORDER BY category_name;
 
-/* Result:
-|category_name|avg_rental_count|
-|-------------|----------------|
-|Action       |2               |
-|Animation    |2               |
-|Children     |1               |
-|Classics     |2               |
-|Comedy       |1               |
-|Documentary  |2               |
-|Drama        |2               |
-|Family       |2               |
-|Foreign      |2               |
-|Games        |2               |
-|Horror       |1               |
-|Music        |1               |
-|New          |2               |
-|Sci-Fi       |2               |
-|Sports       |2               |
-|Travel       |1               |
+--Result:
++────────────────+───────────────────+
+| category_name  | avg_rental_count  |
++────────────────+───────────────────+
+| Action         | 2                 |
+| Animation      | 2                 |
+| Children       | 1                 |
+| Classics       | 2                 |
+| Comedy         | 1                 |
+| Documentary    | 2                 |
+| Drama          | 2                 |
+| Family         | 2                 |
+| Foreign        | 2                 |
+| Games          | 2                 |
+| Horror         | 1                 |
+| Music          | 1                 |
+| New            | 2                 |
+| Sci-Fi         | 2                 |
+| Sports         | 2                 |
+| Travel         | 1                 |
++────────────────+───────────────────+
 
-
-*/
 --calculate the percentile values
 DROP TABLE IF EXISTS top_category_percentile;
 CREATE TEMP TABLE top_category_percentile AS
@@ -78,20 +78,21 @@ ORDER BY
   category_rank
 LIMIT 10;
 
-/*Result:
-|customer_id|category_name|rental_count|category_rank|percentile         |
-|-----------|-------------|------------|-------------|-------------------|
-|1          |Classics     |6           |1            |1                  |
-|1          |Comedy       |5           |2            |1                  |
-|2          |Sports       |5           |1            |2                  |
-|2          |Classics     |4           |2            |2                  |
-|3          |Action       |4           |1            |4                  |
-|3          |Sci-Fi       |3           |2            |15                 |
-|4          |Horror       |3           |1            |8                  |
-|4          |Drama        |2           |2            |32                 |
-|5          |Classics     |7           |1            |1                  |
-|5          |Animation    |6           |2            |1                  |
-*/
+--Result:
++──────────────+────────────────+───────────────+────────────────+─────────────+
+| customer_id  | category_name  | rental_count  | category_rank  | percentile  |
++──────────────+────────────────+───────────────+────────────────+─────────────+
+| 1            | Classics       | 6             | 1              | 1           |
+| 1            | Comedy         | 5             | 2              | 1           |
+| 2            | Sports         | 5             | 1              | 2           |
+| 2            | Classics       | 4             | 2              | 2           |
+| 3            | Action         | 4             | 1              | 4           |
+| 3            | Sci-Fi         | 3             | 2              | 15          |
+| 4            | Horror         | 3             | 1              | 8           |
+| 4            | Drama          | 2             | 2              | 32          |
+| 5            | Classics       | 7             | 1              | 1           |
+| 5            | Animation      | 6             | 2              | 1           |
++──────────────+────────────────+───────────────+────────────────+─────────────+
 
 --Joining our temporary tables
 DROP TABLE IF EXISTS customer_category_joint_table;
@@ -122,12 +123,13 @@ WHERE customer_id = 1
 ORDER BY percentile
 LIMIT 5;
 
-/*Result:
-|customer_id|category_name|rental_count|latest_rental_date|total_rental_count |avg_rental_count|percentile|average_comparison|category_percentage|
-|-----------|-------------|------------|------------------|-------------------|----------------|----------|------------------|-------------------|
-|1          |Comedy       |5           |2005-08-22T19:41:37.000Z|32                 |1               |1         |4                 |16                 |
-|1          |Classics     |6           |2005-08-19T09:55:16.000Z|32                 |2               |1         |4                 |19                 |
-*/
+--Result:
++──────────────+────────────────+───────────────+───────────────────────────+─────────────────────+───────────────────+─────────────+─────────────────────+──────────────────────+
+| customer_id  | category_name  | rental_count  | latest_rental_date        | total_rental_count  | avg_rental_count  | percentile  | average_comparison  | category_percentage  |
++──────────────+────────────────+───────────────+───────────────────────────+─────────────────────+───────────────────+─────────────+─────────────────────+──────────────────────+
+| 1            | Comedy         | 5             | 2005-08-22T19:41:37.000Z  | 32                  | 1                 | 1           | 4                   | 16                   |
+| 1            | Classics       | 6             | 2005-08-19T09:55:16.000Z  | 32                  | 2                 | 1           | 4                   | 19                   |
++──────────────+────────────────+───────────────+───────────────────────────+─────────────────────+───────────────────+─────────────+─────────────────────+──────────────────────+
 
 --create top 2 category insights table
 DROP TABLE IF EXISTS top_category_insights;
@@ -162,20 +164,21 @@ ORDER BY
   percentile
 LIMIT 10;
 
-/*Result:
-|customer_id|category_rank|category_name|rental_count|average_comparison |percentile|category_percentage|
-|-----------|-------------|-------------|------------|-------------------|----------|-------------------|
-|1          |1            |Classics     |6           |4                  |1         |19                 |
-|1          |2            |Comedy       |5           |4                  |1         |16                 |
-|2          |1            |Sports       |5           |3                  |2         |19                 |
-|2          |2            |Classics     |4           |2                  |2         |15                 |
-|3          |1            |Action       |4           |2                  |4         |15                 |
-|3          |2            |Sci-Fi       |3           |1                  |15        |12                 |
-|4          |1            |Horror       |3           |2                  |8         |14                 |
-|4          |2            |Drama        |2           |0                  |32        |9                  |
-|5          |1            |Classics     |7           |5                  |1         |18                 |
-|5          |2            |Animation    |6           |4                  |1         |16                 |
-*/
+--Result:
++──────────────+────────────────+────────────────+───────────────+─────────────────────+─────────────+──────────────────────+
+| customer_id  | category_rank  | category_name  | rental_count  | average_comparison  | percentile  | category_percentage  |
++──────────────+────────────────+────────────────+───────────────+─────────────────────+─────────────+──────────────────────+
+| 1            | 1              | Classics       | 6             | 4                   | 1           | 19                   |
+| 1            | 2              | Comedy         | 5             | 4                   | 1           | 16                   |
+| 2            | 1              | Sports         | 5             | 3                   | 2           | 19                   |
+| 2            | 2              | Classics       | 4             | 2                   | 2           | 15                   |
+| 3            | 1              | Action         | 4             | 2                   | 4           | 15                   |
+| 3            | 2              | Sci-Fi         | 3             | 1                   | 15          | 12                   |
+| 4            | 1              | Horror         | 3             | 2                   | 8           | 14                   |
+| 4            | 2              | Drama          | 2             | 0                   | 32          | 9                    |
+| 5            | 1              | Classics       | 7             | 5                   | 1           | 18                   |
+| 5            | 2              | Animation      | 6             | 4                   | 1           | 16                   |
++──────────────+────────────────+────────────────+───────────────+─────────────────────+─────────────+──────────────────────+
 
 --1st Category Insights
 DROP TABLE IF EXISTS first_category_insights;
@@ -194,20 +197,21 @@ FROM first_category_insights
 ORDER BY customer_id
 LIMIT 10;
 
-/*Result:
-|customer_id|category_name|rental_count|average_comparison|percentile         |
-|-----------|-------------|------------|------------------|-------------------|
-|1          |Classics     |6           |4                 |1                  |
-|2          |Sports       |5           |3                 |2                  |
-|3          |Action       |4           |2                 |4                  |
-|4          |Horror       |3           |2                 |8                  |
-|5          |Classics     |7           |5                 |1                  |
-|6          |Drama        |4           |2                 |3                  |
-|7          |Sports       |5           |3                 |2                  |
-|8          |Classics     |4           |2                 |2                  |
-|9          |Foreign      |4           |2                 |6                  |
-|10         |Documentary  |4           |2                 |5                  |
-*/
+--Result:
++──────────────+────────────────+───────────────+─────────────────────+─────────────+
+| customer_id  | category_name  | rental_count  | average_comparison  | percentile  |
++──────────────+────────────────+───────────────+─────────────────────+─────────────+
+| 1            | Classics       | 6             | 4                   | 1           |
+| 2            | Sports         | 5             | 3                   | 2           |
+| 3            | Action         | 4             | 2                   | 4           |
+| 4            | Horror         | 3             | 2                   | 8           |
+| 5            | Classics       | 7             | 5                   | 1           |
+| 6            | Drama          | 4             | 2                   | 3           |
+| 7            | Sports         | 5             | 3                   | 2           |
+| 8            | Classics       | 4             | 2                   | 2           |
+| 9            | Foreign        | 4             | 2                   | 6           |
+| 10           | Documentary    | 4             | 2                   | 5           |
++──────────────+────────────────+───────────────+─────────────────────+─────────────+
 
 /*///////////////////////////////////
 
@@ -235,20 +239,21 @@ FROM second_category_insights
 ORDER BY customer_id
 LIMIT 10;
 
-/*Result:
-|customer_id|category_name|rental_count|category_percentage|
-|-----------|-------------|------------|-------------------|
-|1          |Comedy       |5           |16                 |
-|2          |Classics     |4           |15                 |
-|3          |Sci-Fi       |3           |12                 |
-|4          |Drama        |2           |9                  |
-|5          |Animation    |6           |16                 |
-|6          |Sci-Fi       |3           |11                 |
-|7          |Animation    |5           |15                 |
-|8          |Drama        |4           |17                 |
-|9          |Travel       |4           |17                 |
-|10         |Games        |4           |16                 |
-*/
+--Result:
++──────────────+────────────────+───────────────+──────────────────────+
+| customer_id  | category_name  | rental_count  | category_percentage  |
++──────────────+────────────────+───────────────+──────────────────────+
+| 1            | Comedy         | 5             | 16                   |
+| 2            | Classics       | 4             | 15                   |
+| 3            | Sci-Fi         | 3             | 12                   |
+| 4            | Drama          | 2             | 9                    |
+| 5            | Animation      | 6             | 16                   |
+| 6            | Sci-Fi         | 3             | 11                   |
+| 7            | Animation      | 5             | 15                   |
+| 8            | Drama          | 4             | 17                   |
+| 9            | Travel         | 4             | 17                   |
+| 10           | Games          | 4             | 16                   |
++──────────────+────────────────+───────────────+──────────────────────+
 
 /*///////////////////////////////////
 

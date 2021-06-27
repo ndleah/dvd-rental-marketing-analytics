@@ -21,25 +21,26 @@ FROM base_counts
 GROUP BY record_count
 ORDER BY record_count;
 
-/* Result:
-|record_count|unique_category_id_values|
-|------------|-------------------------|
-|51          |1                        |
-|56          |1                        |
-|57          |2                        |
-|58          |1                        |
-|60          |1                        |
-|61          |2                        |
-|62          |1                        |
-|63          |1                        |
-|64          |1                        |
-|66          |1                        |
-|68          |1                        |
-|69          |1                        |
-|73          |1                        |
-|74          |1                        |
+--Result:
++───────────────+────────────────────────────+
+| record_count  | unique_category_id_values  |
++───────────────+────────────────────────────+
+| 51            | 1                          |
+| 56            | 1                          |
+| 57            | 2                          |
+| 58            | 1                          |
+| 60            | 1                          |
+| 61            | 2                          |
+| 62            | 1                          |
+| 63            | 1                          |
+| 64            | 1                          |
+| 66            | 1                          |
+| 68            | 1                          |
+| 69            | 1                          |
+| 73            | 1                          |
+| 74            | 1                          |
++───────────────+────────────────────────────+
 
-*/
 
 --> **FINDING**: VALID HYPOTHESIS (TRUE)
 
@@ -59,11 +60,12 @@ FROM base_counts
 GROUP BY record_count
 ORDER BY record_count;
 
-/* Result:
-|record_count|unique_category_id_values|
-|------------|-------------------------|
-|1           |16                       |
-*/
+--Result:
++───────────────+────────────────────────────+
+| record_count  | unique_category_id_values  |
++───────────────+────────────────────────────+
+| 1             | 16                         |
++───────────────+────────────────────────────+
 
 --> **FINDING**: VALID HYPOTHESIS (TRUE)
 
@@ -87,12 +89,13 @@ LEFT JOIN dvd_rentals.category AS category
 ON film_category.category_id = category.category_id
 WHERE category.category_id IS NULL;
 
-/*Result:
-|count|
-|-----|
-|0    |
-*/  
-
+--Result:
++────────+
+| count  |
++────────+
+| 0      |
++────────+
+ 
 -- **FINDING**: There are no overlap foreign keys in the film_category table to the film table
 
 -- category table to film_category table
@@ -114,13 +117,13 @@ LEFT JOIN dvd_rentals.film_category AS film_category
 ON film_category.category_id = category.category_id
 WHERE film_category.film_id IS NULL;
 
-/*Result:
-|count|
-|-----|
-|0    |
-*/  
+--Result:
++────────+
+| count  |
++────────+
+| 0      |
++────────+
 
 --> **FINDING**: There are no overlap foreign keys in the film table to the film_category table.
-
 
 --> There is no difference between an inner join or left join for these datasets

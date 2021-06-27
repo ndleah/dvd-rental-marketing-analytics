@@ -21,11 +21,13 @@ FROM base_counts
 GROUP BY record_count
 ORDER BY record_count;
 
-/* Result:
-|record_count|unique_film_id_values|
-|------------|---------------------|
-|1           |1000                 |
-*/
+--Result:
++───────────────+────────────────────────+
+| record_count  | unique_film_id_values  |
++───────────────+────────────────────────+
+| 1             | 1000                   |
++───────────────+────────────────────────+
+
 
 --> **FINDING**: VALID HYPOTHESIS (TRUE)
 
@@ -45,11 +47,13 @@ FROM base_counts
 GROUP BY record_count
 ORDER BY record_count;
 
-/* Result:
-|record_count|unique_film_id_values|
-|------------|---------------------|
-|1           |1000                 |
-*/
+--Result:
++───────────────+────────────────────────+
+| record_count  | unique_film_id_values  |
++───────────────+────────────────────────+
+| 1             | 1000                   |
++───────────────+────────────────────────+
+
 
 --> **FINDING**: VALID HYPOTHESIS (TRUE)
 
@@ -73,11 +77,12 @@ LEFT JOIN dvd_rentals.film AS film
 ON film_category.film_id = film.film_id
 WHERE film.film_id IS NULL;
 
-/*Result:
-|count|
-|-----|
-|0    |
-*/  
+--Result:
++────────+
+| count  |
++────────+
+| 0      |
++────────+
 
 -- **FINDING**: There are no overlap foreign keys in the film_category table to the film table
 
@@ -100,11 +105,12 @@ LEFT JOIN dvd_rentals.film_category AS film_category
 ON film_category.film_id = film.film_id
 WHERE film_category.film_id IS NULL;
 
-/*Result:
-|count|
-|-----|
-|0    |
-*/  
+--Result:
++────────+
+| count  |
++────────+
+| 0      |
++────────+
 
 --> **FINDING**: There are no overlap foreign keys in the film table to the film_category table.
 

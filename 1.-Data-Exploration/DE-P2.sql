@@ -21,17 +21,18 @@ FROM base_counts
 GROUP BY record_count
 ORDER BY record_count;
 
-/* Result:
-|record_count|unique_film_id_values|
-|------------|---------------------|
-|2           |133                  |
-|3           |131                  |
-|4           |183                  |
-|5           |136                  |
-|6           |187                  |
-|7           |116                  |
-|8           |72                   |
-*/
+-- Result:
++───────────────+────────────────────────+
+| record_count  | unique_film_id_values  |
++───────────────+────────────────────────+
+| 2             | 133                    |
+| 3             | 131                    |
+| 4             | 183                    |
+| 5             | 136                    |
+| 6             | 187                    |
+| 7             | 116                    |
+| 8             | 72                     |
++───────────────+────────────────────────+
 
 --> **FINDING**: VALID HYPOTHESIS (TRUE)
 
@@ -51,11 +52,12 @@ FROM base_counts
 GROUP BY record_count
 ORDER BY record_count;
 
-/* Result:
-|record_count|unique_film_id_values|
-|------------|---------------------|
-|1           |1000                 |
-*/
+-- Result:
++───────────────+────────────────────────+
+| record_count  | unique_film_id_values  |
++───────────────+────────────────────────+
+| 1             | 1000                   |
++───────────────+────────────────────────+
 
 --> **FINDING**: VALID HYPOTHESIS (TRUE)
 
@@ -79,11 +81,12 @@ LEFT JOIN dvd_rentals.film AS film
 ON inventory.film_id = film.film_id
 WHERE film.film_id IS NULL;
 
-/*Result:
-|count|
-|-----|
-|0    |
-*/  
+--Result:
++────────+
+| count  |
++────────+
+| 0      |
++────────+
 
 -- **FINDING**: There are no overlap foreign keys in the inventory table to the film table
 
@@ -106,11 +109,12 @@ LEFT JOIN dvd_rentals.inventory AS inventory
 ON inventory.film_id = film.film_id
 WHERE inventory.film_id IS NULL;
 
-/*Result:
-|count|
-|-----|
-|42   |
-*/  
+--Result:
++────────+
+| count  |
++────────+
+| 42     |
++────────+
 
 --> **FINDING**: There were 42 foreign keys which exist in the dvd_rentals.film table than in the dvd_rentals.inventory table.
 
@@ -124,11 +128,12 @@ WHERE EXISTS (
   FROM dvd_rentals.film
   WHERE film.film_id = inventory.film_id
 );
-/*Result:
-|count|
-|-----|
-|958  |
-*/  
+--Result:
++────────+
+| count  |
++────────+
+| 958    |
++────────+
 
 
 --> **FINDING**: We will be expecting a total distinct count of film_id values of 958 once we perform the final join between our 2 tables.
@@ -174,11 +179,12 @@ UNION
   FROM inner_join_part_2
 );
 
-/* Result:
-|join_type|record_count|unique_key_values|
-|---------|------------|-----------------|
-|inner join|4581       |958             |
-|left join|4581       |958             |
-*/
+--Result:
++────────────+───────────────+────────────────────+
+| join_type  | record_count  | unique_key_values  |
++────────────+───────────────+────────────────────+
+| inner join | 4581          | 958                |
+| left join  | 4581          | 958                |
++────────────+───────────────+────────────────────+
 
 -- **FINDING**: There is no difference between an inner join or left join for these datasets

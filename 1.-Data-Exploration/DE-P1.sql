@@ -21,12 +21,14 @@ SELECT
 FROM dvd_rentals.inventory
 );
 
-/*Result:
-|table_name|count|
-|----------|-----|
-|inventory table|4581 |
-|rental table|4580 |
-*/
+--Result:
++──────────────────+────────+
+| table_name       | count  |
++──────────────────+────────+
+| inventory table  | 4581   |
+| rental table     | 4580   |
++──────────────────+────────+
+
 
 --> **FINDING**: INVALID HYPOTHESIS (FALSE)
 
@@ -47,15 +49,16 @@ FROM counts_base
 GROUP BY row_counts
 ORDER BY row_counts;
 
-/*Result:
-|row_counts|count_of_target_values|
-|----------|----------------------|
-|1         |4                     |
-|2         |1126                  |
-|3         |1151                  |
-|4         |1160                  |
-|5         |1139                  |
-*/
+--*Result:
++─────────────+─────────────────────────+
+| row_counts  | count_of_target_values  |
++─────────────+─────────────────────────+
+| 1           | 4                       |
+| 2           | 1126                    |
+| 3           | 1151                    |
+| 4           | 1160                    |
+| 5           | 1139                    |
++─────────────+─────────────────────────+
 
 --> **FINDING**: VALID HYPOTHESIS (TRUE)
 
@@ -97,15 +100,17 @@ FROM counts_base
 GROUP BY row_counts
 ORDER BY row_counts;
 
-/*Result:
-|row_counts|count_of_fk_values|
-|----------|------------------|
-|1         |4                 |
-|2         |1126              |
-|3         |1151              |
-|4         |1160              |
-|5         |1139              |
-*/
+--Result:
++─────────────+─────────────────────+
+| row_counts  | count_of_fk_values  |
++─────────────+─────────────────────+
+| 1           | 4                   |
+| 2           | 1126                |
+| 3           | 1151                |
+| 4           | 1160                |
+| 5           | 1139                |
++─────────────+─────────────────────+
+
 
 -- b. dvd_rentals.inventory
   -- first generate group by counts on the foreign_key_values column
@@ -124,11 +129,12 @@ FROM counts_base
 GROUP BY row_counts
 ORDER BY row_counts;
 
-/*Result:
-|row_counts|count_of_fk_values|
-|----------|------------------|
-|1         |4581              |
-*/
+--Result:
++─────────────+─────────────────────+
+| row_counts  | count_of_fk_values  |
++─────────────+─────────────────────+
+| 1           | 4581                |
++─────────────+─────────────────────+
 
 /* **FINDING**:   
   **Rental table**: There may exist 1 or more record for each unique inventory_id value in this table - "a 1-to-many relationship" for the inventory_id
@@ -156,11 +162,12 @@ LEFT JOIN dvd_rentals.inventory AS inventory
 ON inventory.inventory_id = rental.inventory_id
 WHERE inventory.inventory_id IS NULL;
 
-/*Result:
-|count|
-|-----|
-|0    |
-*/  
+--Result:
++────────+
+| count  |
++────────+
+| 0      |
++────────+  
 
 -- **FINDING**: There are no inventory_id records which appear in the dvd_rentals.rental table which does not appear in the dvd_rentals.inventory table.
 -- how many foreign keys only exist in the right table and not in the left?
@@ -183,11 +190,12 @@ LEFT JOIN dvd_rentals.rental AS rental
 ON inventory.inventory_id = rental.inventory_id
 WHERE rental.inventory_id IS NULL;
 
-/*Result:
-|count|
-|-----|
-|1    |
-*/  
+--Result:
++────────+
+| count  |
++────────+
+| 1      |
++────────+
 
 -- **FINDING**: There are 1 foreign key record that only exist in the right table
 
@@ -200,11 +208,12 @@ WHERE NOT EXISTS (
   WHERE rental.inventory_id = inventory.inventory_id
 );
 
-/*Result:
-|inventory_id|film_id|store_id|last_update             |
-|------------|-------|--------|------------------------|
-|5           |1      |2       |2006-02-15T05:09:17.000Z|
-*/
+--Result:
++───────────────+──────────+───────────+───────────────────────────+
+| inventory_id  | film_id  | store_id  | last_update               |
++───────────────+──────────+───────────+───────────────────────────+
+| 5             | 1        | 2         | 2006-02-15T05:09:17.000Z  |
++───────────────+──────────+───────────+───────────────────────────+
 
 -- Perfom a LEFT SEMI JOIN with WHERE EXIST function to get the count of unique foreign key values:
 SELECT
@@ -225,11 +234,12 @@ LEFT JOIN dvd_rentals.inventory AS inventory
 ON rental.inventory_id = inventory.inventory_id
 WHERE inventory.inventory_id IS NOT NULL;
 
-/*Result:
-|count|
-|-----|
-|4580 |
-*/  
+--Result:
++────────+
+| count  |
++────────+
+| 4580   |
++────────+
 
 -- III. IMPLEMENTING THE JOIN(S)
 -- Inspect if the INNER JOIN is the same with LEFT JOIN or not in this case example:
@@ -272,11 +282,12 @@ SELECT
 FROM inner_rental_join
 );
 
-/* Result:
-|join_type|record_count|unique_key_values|
-|---------|------------|-----------------|
-|inner join|16044       |4580             |
-|left join|16044       |4580             |
-*/
+-- Result:
++────────────+───────────────+────────────────────+
+| join_type  | record_count  | unique_key_values  |
++────────────+───────────────+────────────────────+
+| inner join | 16044         | 4580               |
+| left join  | 16044         | 4580               |
++────────────+───────────────+────────────────────+
 
 -- **FINDING**: There is no difference between an inner join or left join for these datasets

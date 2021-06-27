@@ -20,15 +20,16 @@ SELECT *
 FROM film_counts
 LIMIT 5;
 
-/*Result:
-|film_id|title   |category_name|rental_count|
-|-------|--------|-------------|------------|
-|655    |PANTHER REDS|Sci-Fi       |15          |
-|285    |ENGLISH BULWORTH|Sci-Fi       |30          |
-|258    |DRUMS DYNAMITE|Horror       |13          |
-|809    |SLIPPER FIDELITY|Sports       |16          |
-|883    |TEQUILA PAST|Children     |6           |
-*/
+--Result:
++──────────+───────────────────+────────────────+───────────────+
+| film_id  | title             | category_name  | rental_count  |
++──────────+───────────────────+────────────────+───────────────+
+| 655      | PANTHER REDS      | Sci-Fi         | 15            |
+| 285      | ENGLISH BULWORTH  | Sci-Fi         | 30            |
+| 258      | DRUMS DYNAMITE    | Horror         | 13            |
+| 809      | SLIPPER FIDELITY  | Sports         | 16            |
+| 883      | TEQUILA PAST      | Children       | 6             |
++──────────+───────────────────+────────────────+───────────────+
 
 --create Category Film Exclusions table
 DROP TABLE IF EXISTS category_film_exclusions;
@@ -42,20 +43,21 @@ SELECT *
 FROM category_film_exclusions
 LIMIT 10;
 
-/*Result:
-|customer_id|film_id |
-|-----------|--------|
-|596        |103     |
-|176        |121     |
-|459        |724     |
-|375        |641     |
-|153        |730     |
-|1          |480     |
-|291        |285     |
-|144        |93      |
-|158        |786     |
-|211        |962     |
-*/
+--Result:
++──────────────+──────────+
+| customer_id  | film_id  |
++──────────────+──────────+
+| 596          | 103      |
+| 176          | 121      |
+| 459          | 724      |
+| 375          | 641      |
+| 153          | 730      |
+| 1            | 480      |
+| 291          | 285      |
+| 144          | 93       |
+| 158          | 786      |
+| 211          | 962      |
++──────────────+──────────+
 
 --create 3 top category film recommendations for the top 2 categories
 DROP TABLE IF EXISTS top_category_recommendations;
@@ -97,16 +99,17 @@ FROM top_category_recommendations
 WHERE customer_id = 1
 ORDER BY category_rank, reco_rank;
 
-/*Result:
-|customer_id|category_name|category_rank|film_id|title              |rental_count|reco_rank|
-|-----------|-------------|-------------|-------|-------------------|------------|---------|
-|1          |Classics     |1            |891    |TIMBERLAND SKY     |31          |1        |
-|1          |Classics     |1            |358    |TIMBERLAND SKY     |28          |2        |
-|1          |Classics     |1            |951    |VOYAGE LEGALLY     |28          |3        |
-|1          |Comedy       |2            |1000   |ZORRO ARK          |31          |1        |
-|1          |Comedy       |2            |127    |CAT CONEHEADS      |30          |2        |
-|1          |Comedy       |2            |638    |OPERATION OPERATION|27          |3        |
-*/
+--Result:
++──────────────+────────────────+────────────────+──────────+──────────────────────+───────────────+────────────+
+| customer_id  | category_name  | category_rank  | film_id  | title                | rental_count  | reco_rank  |
++──────────────+────────────────+────────────────+──────────+──────────────────────+───────────────+────────────+
+| 1            | Classics       | 1              | 891      | TIMBERLAND SKY       | 31            | 1          |
+| 1            | Classics       | 1              | 358      | TIMBERLAND SKY       | 28            | 2          |
+| 1            | Classics       | 1              | 951      | VOYAGE LEGALLY       | 28            | 3          |
+| 1            | Comedy         | 2              | 1000     | ZORRO ARK            | 31            | 1          |
+| 1            | Comedy         | 2              | 127      | CAT CONEHEADS        | 30            | 2          |
+| 1            | Comedy         | 2              | 638      | OPERATION OPERATION  | 27            | 3          |
++──────────────+────────────────+────────────────+──────────+──────────────────────+───────────────+────────────+
 
 /*///////////////////////////////////
 

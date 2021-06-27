@@ -23,20 +23,22 @@ INNER JOIN dvd_rentals.category
 
 SELECT * FROM complete_joint_dataset limit 10;
 
-/*Result:
-|customer_id|film_id|title          |category_id|category_name|
-|-----------|-------|---------------|-----------|-------------|
-|130        |80     |BLANKET BEVERLY|8          |Family       |
-|459        |333    |FREAKY POCUS   |12         |Music        |
-|408        |373    |GRADUATE LORD  |3          |Children     |
-|333        |535    |LOVE SUICIDES  |11         |Horror       |
-|222        |450    |IDOLS SNATCHERS|3          |Children     |
-|549        |613    |MYSTIC TRUMAN  |5          |Comedy       |
-|269        |870    |SWARM GOLD     |11         |Horror       |
-|239        |510    |LAWLESS VISION |2          |Animation    |
-|126        |565    |MATRIX SNOWMAN |9          |Foreign      |
-|399        |396    |HANGING DEEP   |7          |Drama        |
-*/
+--Result:
++──────────────+──────────+──────────────────+──────────────+────────────────+
+| customer_id  | film_id  | title            | category_id  | category_name  |
++──────────────+──────────+──────────────────+──────────────+────────────────+
+| 130          | 80       | BLANKET BEVERLY  | 8            | Family         |
+| 459          | 333      | FREAKY POCUS     | 12           | Music          |
+| 408          | 373      | GRADUATE LORD    | 3            | Children       |
+| 333          | 535      | LOVE SUICIDES    | 11           | Horror         |
+| 222          | 450      | IDOLS SNATCHERS  | 3            | Children       |
+| 549          | 613      | MYSTIC TRUMAN    | 5            | Comedy         |
+| 269          | 870      | SWARM GOLD       | 11           | Horror         |
+| 239          | 510      | LAWLESS VISION   | 2            | Animation      |
+| 126          | 565      | MATRIX SNOWMAN   | 9            | Foreign        |
+| 399          | 396      | HANGING DEEP     | 7            | Drama          |
++──────────────+──────────+──────────────────+──────────────+────────────────+
+
 
 
 --II. DEALING WITH TIES 
@@ -75,17 +77,20 @@ ORDER BY
   latest_rental_date DESC
 LIMIT 10;
 
- /*Result: 
-|customer_id|category_name|rental_count|latest_rental_date      |
-|-----------|-------------|------------|------------------------|
-|1          |Classics     |6           |2005-08-19T09:55:16.000Z|
-|1          |Comedy       |5           |2005-08-22T19:41:37.000Z|
-|1          |Drama        |4           |2005-08-18T03:57:29.000Z|
-|1          |Animation    |2           |2005-08-22T20:03:46.000Z|
-|1          |Sci-Fi       |2           |2005-08-21T23:33:57.000Z|
-|1          |New          |2           |2005-08-19T13:56:54.000Z|
-|1          |Action       |2           |2005-08-17T12:37:54.000Z|
-|1          |Music        |2           |2005-07-09T16:38:01.000Z|
-|1          |Sports       |2           |2005-07-08T07:33:56.000Z|
-|1          |Family       |1           |2005-08-02T18:01:38.000Z|
- */
+ --Result: 
++──────────────+────────────────+───────────────+───────────────────────────+
+| customer_id  | category_name  | rental_count  | latest_rental_date        |
++──────────────+────────────────+───────────────+───────────────────────────+
+| 1            | Classics       | 6             | 2005-08-19T09:55:16.000Z  |
+| 1            | Comedy         | 5             | 2005-08-22T19:41:37.000Z  |
+| 1            | Drama          | 4             | 2005-08-18T03:57:29.000Z  |
+| 1            | Animation      | 2             | 2005-08-22T20:03:46.000Z  |
+| 1            | Sci-Fi         | 2             | 2005-08-21T23:33:57.000Z  |
+| 1            | New            | 2             | 2005-08-19T13:56:54.000Z  |
+| 1            | Action         | 2             | 2005-08-17T12:37:54.000Z  |
+| 1            | Music          | 2             | 2005-07-09T16:38:01.000Z  |
+| 1            | Sports         | 2             | 2005-07-08T07:33:56.000Z  |
+| 1            | Family         | 1             | 2005-08-02T18:01:38.000Z  |
++──────────────+────────────────+───────────────+───────────────────────────+
+
+ 
