@@ -278,7 +278,15 @@ The following questions are part of this case study - these are example question
 
  <br /> 
 
+# Contribution
 
+Contributions, issues, and feature requests are welcome!
+
+To contribute to Patronify, see the GitHub documentation on **[creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)**.
+
+# Support
+
+Give a ⭐️ if you like this project!
 ___________________________________
 
 <p>&copy; 2021 Leah Nguyen</p>
