@@ -1,19 +1,17 @@
 ![Star Badge](https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flat&color=BC4E99)
 ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
-[![View My Profile](https://img.shields.io/badge/View-My_Profile-green?logo=GitHub)](https://github.com/nduongthucanh)
-[![View Repositories](https://img.shields.io/badge/View-My_Repositories-blue?logo=GitHub)](https://github.com/nduongthucanh?tab=repositories)
-
+[![View My Profile](https://img.shields.io/badge/View-My_Profile-green?logo=GitHub)](https://github.com/ndleah)
+[![View Repositories](https://img.shields.io/badge/View-My_Repositories-blue?logo=GitHub)](https://github.com/ndleah?tab=repositories)
 
 # Serious SQL - Marketing Analytics Case Study
-[![View Data Exploration Folder](https://img.shields.io/badge/View-Data_Exploration_Folder-red?)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration)
-[![View Data Join Folder](https://img.shields.io/badge/View-Data_Join_Folder-red?)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/2.-Data-Join)
-[![View Problem Solving Folder](https://img.shields.io/badge/View-Problem_Solving_Folder-red?)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/3.-Problem-Solving)
+[![View Data Exploration Folder](https://img.shields.io/badge/View-Data_Exploration_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration)
+[![View Data Join Folder](https://img.shields.io/badge/View-Data_Join_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/2.-Data-Join)
+[![View Problem Solving Folder](https://img.shields.io/badge/View-Problem_Solving_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/3.-Problem-Solving)
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/intro-cover.gif" width=100% height=100%>
+<img src="https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/intro-cover.gif" width=100% height=100%>
 
 This case study is contained within the [Serious SQL](https://www.datawithdanny.com) by [Danny Ma](https://www.linkedin.com/in/datawithdanny/). With this **Marketing Analytics Case Study**, I was asked to support the customer analytics team at **DVD Rental Co** who have been tasked with generating the necessary data points required to populate specific parts of this first-ever customer email campaign.
-
 
 <p align="center">
   <img src="https://forthebadge.com/images/badges/built-with-love.svg">
@@ -27,7 +25,6 @@ This case study is contained within the [Serious SQL](https://www.datawithdanny.
  <br /> 
 
 
-
 # 📕 Table of contents
 <!--ts-->
    * 🛠️ [Requirements](#️-requirements)
@@ -39,18 +36,15 @@ This case study is contained within the [Serious SQL](https://www.datawithdanny.
    * 🐋 [Bonus Section](#-bonus-section)
 <!--te-->
 
-
  <br /> 
-
 
 # 🛠️ Requirements
 The marketing team have shared with me a draft of the email they wish to send to their customers:
 
  <br /> 
 
-
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/email-template.png" width=50% height=50%>
+<img src="https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/email-template.png" width=50% height=50%>
 
  <br /> 
 
@@ -62,7 +56,7 @@ For each customer, I need to identify the top 2 categories each customer based o
  <br /> 
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-1.gif" width=50% height=50%>
+<img src="https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-1.gif" width=50% height=50%>
 
  <br /> 
 
@@ -74,7 +68,7 @@ The marketing team has also requested for the 3 most popular films for each cust
  <br /> 
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-2.gif" width=50% height=50%>
+<img src="https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-2.gif" width=50% height=50%>
 
  <br /> 
 
@@ -97,7 +91,7 @@ For the second ranking category **```(requirement 4)```**:
  <br /> 
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-3-4.gif" width=50% height=50%>
+<img src="https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-3-4.gif" width=50% height=50%>
 
  <br /> 
 
@@ -109,7 +103,7 @@ Along with the top 2 categories, marketing has also requested top actor film rec
  <br /> 
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-5.gif" width=50% height=50%>
+<img src="https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/requirement-5.gif" width=50% height=50%>
 
  <br /> 
 
@@ -119,13 +113,13 @@ Along with the top 2 categories, marketing has also requested top actor film rec
 > 
 > Therefore, the first section will cover the data inspection process of these tables in order to find out the best JOIN type that will be the most suitable for the later problem solving stage.
 
-## View the entire solution for this part [**here**](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration) or
-[![View Data Exploration Folder](https://img.shields.io/badge/View-Data_Exploration_Folder-red?style=for-the-badge&logo=GITHUB)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration)
+## View the entire solution for this part [**here**](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration) or
+[![View Data Exploration Folder](https://img.shields.io/badge/View-Data_Exploration_Folder-red?style=for-the-badge&logo=GITHUB)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration)
 
 **Preview:**
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/sc-dep1.gif" width=100% height=100%>
+<img src="https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/sc-dep1.gif" width=100% height=100%>
 
  <br /> 
 
@@ -135,28 +129,27 @@ Along with the top 2 categories, marketing has also requested top actor film rec
 
 > Now that I’ve identified the key columns and highlighted some things I need to keep in mind when performing some table joins for my data analysis - next exciting step is to join them together.
 
-## View the entire solution for this part [**here**](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/2.-Data-Join) or
-[![View Data Join Folder](https://img.shields.io/badge/View-Data_Join_Folder-red?style=for-the-badge&logo=GITHUB)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/2.-Data-Join)
+## View the entire solution for this part [**here**](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/2.-Data-Join) or
+[![View Data Join Folder](https://img.shields.io/badge/View-Data_Join_Folder-red?style=for-the-badge&logo=GITHUB)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/2.-Data-Join)
 
  <br /> 
 
 **Preview:**
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/sc-dep2.gif" width=100% height=100%>
-
+<img src="https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/sc-dep2.gif" width=100% height=100%>
 
 # 🚀 Solutions
 > Finally, after I’ve combined all of different datasets together into a single base table which I can use for our insights, this section will aim to cover those core calculated fields which I broke down in the first [Key Business Requirements](#Key-Business-Requirements) section of this case study.
-## View the entire solution for this part [**here**](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/3.-Problem-Solving) or
-[![View Data Join Folder](https://img.shields.io/badge/View-Problem_Solving_Folder-red?style=for-the-badge&logo=GITHUB)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/3.-Problem-Solving)
+## View the entire solution for this part [**here**](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/3.-Problem-Solving) or
+[![View Data Join Folder](https://img.shields.io/badge/View-Problem_Solving_Folder-red?style=for-the-badge&logo=GITHUB)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/3.-Problem-Solving)
 
  <br /> 
 
 **Preview:**
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/sc-dep3.gif" width=100% height=100%>
+<img src="https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/sc-dep3.gif" width=100% height=100%>
 
 # 🧙‍♂️ Result
 okay so now I've successfully generated all the insights needed for this email template, let's go on to the final step to inspect the final output appearance of the actual email when sending it to the end customers. To do this, I'm gonna craft together the [draft template](#key-business-requirements) the marketing team has already provided with our valuable data found in previous parts.
@@ -177,7 +170,7 @@ Let's assume this email template will be sent to a customer with **```customer_i
 
 **Email Mock-up**:
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/template_r1.png" width=50% height=50%>
+<img src="https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/template_r1.png" width=50% height=50%>
 
  <br /> 
 
@@ -198,7 +191,7 @@ Let's assume this email template will be sent to a customer with **```customer_i
 
 **Email Mock-up**:
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/template_r2.png" width=50% height=50%>
+<img src="https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/template_r2.png" width=50% height=50%>
 
  <br /> 
 
@@ -223,7 +216,7 @@ Let's assume this email template will be sent to a customer with **```customer_i
 **Email Mock-up**:
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/template_r3-4.png" width=50% height=50%>
+<img src="https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/template_r3-4.png" width=50% height=50%>
 
  <br /> 
 
@@ -243,7 +236,7 @@ Let's assume this email template will be sent to a customer with **```customer_i
 **Email Mock-up**:
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/template_r5.png" width=50% height=50%>
+<img src="https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/template_r5.png" width=50% height=50%>
 
  <br /> 
 
@@ -251,12 +244,12 @@ Let's assume this email template will be sent to a customer with **```customer_i
 Hooray! Finally, this is what out final input looks like:
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/final-output.png" width=50% height=50%>
+<img src="https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/final-output.png" width=50% height=50%>
 
 # 🐋 Bonus Section
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/The_Office_GIF.gif" width=60% height=60%>
+<img src="https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/The_Office_GIF.gif" width=60% height=60%>
 
 The following questions are part of this case study - these are example questions the Marketing team might be interested in as a bonus section which cover more in-depth insights of the email template!
 
@@ -275,8 +268,8 @@ The following questions are part of this case study - these are example question
 13. How many films on average had customers already seen that feature their favourite actor rounded to closest integer?
 14. What is the most common top categories combination if order was irrelevant and how many customers have this combination? (e.g. Horror and Drama is a the same as Drama and Horror)
 
-## View the entire solution for this part [**here**](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/3.-Problem-Solving) or
-[![View Data Join Folder](https://img.shields.io/badge/View-Bonus_Section_Folder-green?style=for-the-badge&logo=GITHUB)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/4.-Bonus-Section)
+## View the entire solution for this part [**here**](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/3.-Problem-Solving) or
+[![View Data Join Folder](https://img.shields.io/badge/View-Bonus_Section_Folder-green?style=for-the-badge&logo=GITHUB)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/4.-Bonus-Section)
 
  <br /> 
 
@@ -292,3 +285,4 @@ Give a ⭐️ if you like this project!
 ___________________________________
 
 <p>&copy; 2021 Leah Nguyen</p>
+

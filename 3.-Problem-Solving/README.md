@@ -1,16 +1,16 @@
-[![View Data Exploration Folder](https://img.shields.io/badge/View-Data_Exploration_Folder-red?)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration)
-[![View Data Join Folder](https://img.shields.io/badge/View-Data_Join_Folder-red?)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Join)
-[![View Main Folder](https://img.shields.io/badge/View-Main_Folder-red?)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis)
+[![View Data Exploration Folder](https://img.shields.io/badge/View-Data_Exploration_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration)
+[![View Data Join Folder](https://img.shields.io/badge/View-Data_Join_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Join)
+[![View Main Folder](https://img.shields.io/badge/View-Main_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis)
 
-[![View Repositories](https://img.shields.io/badge/View-My_Repositories-blue?logo=GitHub)](https://github.com/nduongthucanh?tab=repositories)
-[![View My Profile](https://img.shields.io/badge/View-My_Profile-green?logo=GitHub)](https://github.com/nduongthucanh)
+[![View Repositories](https://img.shields.io/badge/View-My_Repositories-blue?logo=GitHub)](https://github.com/ndleah?tab=repositories)
+[![View My Profile](https://img.shields.io/badge/View-My_Profile-green?logo=GitHub)](https://github.com/ndleah)
 
-# **[SERIOUS SQL: MARKETING ANALYTICS CASE STUDY](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis)**
+# **[SERIOUS SQL: MARKETING ANALYTICS CASE STUDY](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis)**
 
 # Problem Solving
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/solving-cover.gif" width=100% height=100%>
+<img src="https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/solving-cover.gif" width=100% height=100%>
 </p>
 
 ## Table of contents
@@ -91,7 +91,6 @@ ORDER BY customer_id;
 |4          |22       |
 |5          |38       |
 
-
 ### **3. Top Categories**
 Finally, with all the data from the above query, I can now generate the table that highlight the top 2 categories each customer based off their past rental history:
 ```sql
@@ -159,7 +158,6 @@ LIMIT 5;
 |258    |DRUMS DYNAMITE|Horror       |13          |
 |809    |SLIPPER FIDELITY|Sports       |16          |
 |883    |TEQUILA PAST|Children     |6           |
-
 
 ### **2. Category Film Exclusions**
 For the next step in our recommendation analysis - I will need to generate a table with all of our customer’s previously watched films so we don’t recommend them something which they’ve already seen before.
@@ -310,7 +308,6 @@ Continue with our data problem solving journey, I will continue with the the per
 
 > **how does the customer rank in terms of the top X% compared to all other customers in this film category?**
 
-
 ```sql
 DROP TABLE IF EXISTS top_category_percentile;
 CREATE TEMP TABLE top_category_percentile AS
@@ -456,7 +453,6 @@ LIMIT 10;
 |4          |2            |Drama        |2           |0                  |32        |9                  |
 |5          |1            |Classics     |7           |5                  |1         |18                 |
 |5          |2            |Animation    |6           |4                  |1         |16                 |
-
 
 ### **5. 1st Category Insights**
 
@@ -642,7 +638,6 @@ LIMIT 10;
 
 ### **3. Top Actor Film Counts**
 I need to generate aggregated total rental counts across all customers by **```actor_id```** and **```film_id```** so I can join onto our **```top_actor_counts```** table:
-
 
 ```sql
 DROP TABLE IF EXISTS actor_film_counts;
@@ -926,13 +921,12 @@ LIMIT 5;
 
 <br /> 
 
-View The Final Result: [![View Main Folder](https://img.shields.io/badge/View-Main_Folder-red?)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis)
+View The Final Result: [![View Main Folder](https://img.shields.io/badge/View-Main_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis)
 
-View The 1st Part: [![View Data Exploration Folder](https://img.shields.io/badge/View-Data_Exploration_Folder-red?)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration)
+View The 1st Part: [![View Data Exploration Folder](https://img.shields.io/badge/View-Data_Exploration_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration)
 
-View The 2nd Part: [![View Main FolderData Join Folder](https://img.shields.io/badge/View-Data_Join_Folder-red?)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/2.-Data-Join)
+View The 2nd Part: [![View Main FolderData Join Folder](https://img.shields.io/badge/View-Data_Join_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/2.-Data-Join)
 
 ___________________________________
 
 <p>&copy; 2021 Leah Nguyen</p>
-

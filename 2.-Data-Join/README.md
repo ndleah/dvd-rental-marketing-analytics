@@ -1,16 +1,16 @@
-[![View Data Exploration Folder](https://img.shields.io/badge/View-Data_Exploration_Folder-red?)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration)
-[![View Problem Solving Folder](https://img.shields.io/badge/View-Problem_Solving_Folder-red?)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/3.-Problem-Solving)
-[![View Main Folder](https://img.shields.io/badge/View-Main_Folder-red?)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis)
+[![View Data Exploration Folder](https://img.shields.io/badge/View-Data_Exploration_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration)
+[![View Problem Solving Folder](https://img.shields.io/badge/View-Problem_Solving_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/3.-Problem-Solving)
+[![View Main Folder](https://img.shields.io/badge/View-Main_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis)
 
-[![View Repositories](https://img.shields.io/badge/View-My_Repositories-blue?logo=GitHub)](https://github.com/nduongthucanh?tab=repositories)
-[![View My Profile](https://img.shields.io/badge/View-My_Profile-green?logo=GitHub)](https://github.com/nduongthucanh)
+[![View Repositories](https://img.shields.io/badge/View-My_Repositories-blue?logo=GitHub)](https://github.com/ndleah?tab=repositories)
+[![View My Profile](https://img.shields.io/badge/View-My_Profile-green?logo=GitHub)](https://github.com/ndleah)
 
-# **[SERIOUS SQL: MARKETING ANALYTICS CASE STUDY](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis)**
+# **[SERIOUS SQL: MARKETING ANALYTICS CASE STUDY](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis)**
 
 # Data Overview - Data Join
 
 <p align="center">
-<img src="https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/table-join.gif" width=60% height=60%>
+<img src="https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/table-join.gif" width=60% height=60%>
 </p>
 
 ## **Table of contents**
@@ -127,7 +127,7 @@ LIMIT 10;
 
 **Conclusion:** 
 
-The result look just great for me now, which mean that we can end this part here (Wow, thanks to the super long session we have covered in the **[Data Exploration](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration)** section previously, I can save up a lot of time in the Data Joining part. That's great!).
+The result look just great for me now, which mean that we can end this part here (Wow, thanks to the super long session we have covered in the **[Data Exploration](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration)** section previously, I can save up a lot of time in the Data Joining part. That's great!).
 
 <br /> 
 
@@ -137,11 +137,11 @@ The result look just great for me now, which mean that we can end this part here
 
 <br /> 
 
-View The Next Part: [![View Problem Solving Folder](https://img.shields.io/badge/View-Problem_Solving_Folder-red?)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/3.-Problem-Solving)
+View The Next Part: [![View Problem Solving Folder](https://img.shields.io/badge/View-Problem_Solving_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/3.-Problem-Solving)
 
-Have you viewed the 1st part yet? Take a look here: [![View Data Exploration Folder](https://img.shields.io/badge/View-Data_Exploration_Folder-red?)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration)
+Have you viewed the 1st part yet? Take a look here: [![View Data Exploration Folder](https://img.shields.io/badge/View-Data_Exploration_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration)
 
-Come back to main folder: [![View Main Folder](https://img.shields.io/badge/View-Main_Folder-red?)](https://github.com/nduongthucanh/DVD-Rental-Co-Email-Marketing-Analysis/blob/main)
+Come back to main folder: [![View Main Folder](https://img.shields.io/badge/View-Main_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main)
 
 ___________________________________
 
