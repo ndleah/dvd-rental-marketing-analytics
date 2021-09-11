@@ -277,7 +277,7 @@ The following questions are part of this case study - these are example question
 
 Contributions, issues, and feature requests are welcome!
 
-To contribute to Patronify, see the GitHub documentation on **[creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)**.
+To contribute to this project, see the GitHub documentation on **[creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)**.
 
 # 👏 Support
 
