@@ -109,7 +109,7 @@ Now that I’ve identified the key columns and highlighted some things I need to
 > Finally, after I’ve combined all of different datasets together into a single base table which I can use for our insights, this section will aim to cover those core calculated fields which I broke down in the first [Key Business Requirements](#Key-Business-Requirements) section of this case study.
 ## View the entire solution for this part [**here**]
 
-[![View Problem Solving Folder](https://img.shields.io/badge/View-Problem_Solving_Folder-b11226?style=for-the-badge&logo=GITHUB)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/3.-Problem-Solving)
+[![View Problem Solving Folder](https://img.shields.io/badge/View-Problem_Solving_Folder-b11226?style=for-the-badge&logo=GITHUB)](/Problem%20Solving)
 
 # 🧙‍♂️ Result
 

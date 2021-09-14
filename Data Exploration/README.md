@@ -1,7 +1,7 @@
 [![View Repositories](https://img.shields.io/badge/View-My_Repositories-blue?logo=GitHub)](https://github.com/ndleah?tab=repositories)
 [![View My Profile](https://img.shields.io/badge/View-My_Profile-green?logo=GitHub)](https://github.com/ndleah)
 
-# **[SERIOUS SQL: MARKETING ANALYTICS CASE STUDY](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis)**
+# # DVD Rental Marketing Analytics: Data Exploration
 
 # Data Overview - Data Exploration
 
@@ -654,32 +654,28 @@ For **part 2, 3** and **4**, I repeated each steps of the data exploration journ
 
 However, you can find all the code and answers for part 2, 3 and 4 within this folder as well:
 
----
-
 **Part 2**
 <p align="center">
 <img src="https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/DE-P2.png" width=70% height=70%>
 </p>
 
-[![View P2](https://img.shields.io/badge/view%20P2-here-blue?style=for-the-badge&logo=GITHUB)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration/DE-P2.sql)
+[![View P2](https://img.shields.io/badge/view%20P2-here-blue?style=for-the-badge&logo=GITHUB)](/DE-P2.sql)
 
----
 
 **Part 3**
 <p align="center">
 <img src="https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/DE-P3.png" width=70% height=70%>
 </p>
 
-[![View P3](https://img.shields.io/badge/view%20P3-here-brightgreen?style=for-the-badge&logo=GITHUB)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration/DE-P3.sql)
+[![View P3](https://img.shields.io/badge/view%20P3-here-brightgreen?style=for-the-badge&logo=GITHUB)](/DE-P3.sql)
 
----
 
 **Part 4**
 <p align="center">
 <img src="https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/DE-P4.png" width=70% height=70%>
 </p>
 
-[![View P4](https://img.shields.io/badge/view%20P2-here-yellow?style=for-the-badge&logo=GITHUB)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration/DE-P4.sql)
+[![View P4](https://img.shields.io/badge/view%20P4-here-yellow?style=for-the-badge&logo=GITHUB)](/DE-P4.sql)
 
 
 ___________________________________
