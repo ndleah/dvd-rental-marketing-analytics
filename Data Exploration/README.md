@@ -1,7 +1,3 @@
-[![View Data Join Folder](https://img.shields.io/badge/View-Data_Join_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/2.-Data-Join)
-[![View Problem Solving Folder](https://img.shields.io/badge/View-Problem_Solving_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/3.-Problem-Solving)
-[![View Main Folder](https://img.shields.io/badge/View-Main_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis)
-
 [![View Repositories](https://img.shields.io/badge/View-My_Repositories-blue?logo=GitHub)](https://github.com/ndleah?tab=repositories)
 [![View My Profile](https://img.shields.io/badge/View-My_Profile-green?logo=GitHub)](https://github.com/ndleah)
 
@@ -685,23 +681,6 @@ However, you can find all the code and answers for part 2, 3 and 4 within this f
 
 [![View P4](https://img.shields.io/badge/view%20P2-here-yellow?style=for-the-badge&logo=GITHUB)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration/DE-P4.sql)
 
----
-
-## Next Steps
-
-### *Thanks for reading and scrolling down until this point. I truly aprreciated your patience!* :heart:
-
-<br /> 
-
-### **In the second stage of this project, I will perfom some table joins for retrieving and transform data into meaning insights for our email marketing campaign.**
-
-<br /> 
-
-View The Next Part: [![View Data Join Folder](https://img.shields.io/badge/View-Data_Join_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/2.-Data-Join)
-
-View The 3rd Part: [![View Problem Solving Folder](https://img.shields.io/badge/View-Problem_Solving_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/3.-Problem-Solving)
-
-Come back to main folder: [![View Main Folder](https://img.shields.io/badge/View-Main_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis)
 
 ___________________________________
 

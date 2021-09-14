@@ -1,17 +1,7 @@
-[![View Data Exploration Folder](https://img.shields.io/badge/View-Data_Exploration_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration)
-[![View Data Join Folder](https://img.shields.io/badge/View-Data_Join_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Join)
-[![View Main Folder](https://img.shields.io/badge/View-Main_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis)
-
 [![View Repositories](https://img.shields.io/badge/View-My_Repositories-blue?logo=GitHub)](https://github.com/ndleah?tab=repositories)
 [![View My Profile](https://img.shields.io/badge/View-My_Profile-green?logo=GitHub)](https://github.com/ndleah)
 
-# **[SERIOUS SQL: MARKETING ANALYTICS CASE STUDY](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis)**
-
-# Problem Solving
-
-<p align="center">
-<img src="https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/IMG/solving-cover.gif" width=100% height=100%>
-</p>
+# DVD Rental Marketing Analytics: Problem Solving
 
 ## Table of contents
 <!--ts-->
@@ -528,8 +518,6 @@ LIMIT 10;
 ## For customer 1: 
 ### *You’ve watched 5 Classics films, making up 16% of your entiring viewing history!*
 
----
-
 ## R5: Actor Insights
 ### **1. Actor Joint Table**
 For this entire analysis on actors - we will need to create a new base table as we will need to introduce the **```dvd_rentals.film_actor```** and **```dvd_rentals.actor```** tables to extract all the required data points we need for the final output.
@@ -704,7 +692,6 @@ FROM category_film_exclusions
 LIMIT 10;
 ```
 
-**Result:**
 |customer_id|film_id |
 |-----------|--------|
 |493        |567     |
@@ -786,7 +773,6 @@ LIMIT 15;
 ---
 
 ## Final Transfromation
-To package up all our analysis into a single report - I will need to perform some further transformations to finally generate a sample table for the DVD Rental Co Marketing team to consume.
 
 ```sql
 DROP TABLE IF EXISTS final_data_asset;
@@ -904,7 +890,6 @@ FROM final_data_asset
 LIMIT 5;
 ```
 
-**Result:**
 |customer_id|cat_1   |cat_1_reco_1|cat_1_reco_2|cat_1_reco_3          |cat_2|cat_2_reco_1|cat_2_reco_2|cat_2_reco_3       |actor         |actor_reco_1        |actor_reco_2         |actor_reco_3          |insight_cat_1                                                                                                              |insight_cat_2                                                                 |insight_actor                                                                                                    |
 |-----------|--------|------------|------------|----------------------|-----|------------|------------|-------------------|--------------|--------------------|---------------------|----------------------|---------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
 |1          |Classics|Timberland Sky|Gilmore Boiled|Voyage Legally        |Comedy|Zorro Ark   |Cat Coneheads|Operation Operation|Val Bolger    |Primary Glass       |Alaska Phantom       |Metropolis Coma       |You've watched 6 Classics films, that's 4 more than the DVD Rental Co average and puts you in the top 1% of Classics gurus!|You've watched 5 Comedy films making up 16% of your entire viewing history!   |You've watched 6 films featuring Val Bolger! Here are some other films Val stars in that might interest you!     |
@@ -912,20 +897,6 @@ LIMIT 5;
 |3          |Action  |Rugrats Shakespeare|Suspects Quills|Handicap Boondock     |Sci-Fi|Goodfellas Salute|English Bulworth|Graffiti Love      |Jayne Nolte   |Sweethearts Suspects|Dancing Fever        |Invasion Cyclone      |You've watched 4 Action films, that's 2 more than the DVD Rental Co average and puts you in the top 4% of Action gurus!    |You've watched 3 Sci-Fi films making up 12% of your entire viewing history!   |You've watched 4 films featuring Jayne Nolte! Here are some other films Jayne stars in that might interest you!  |
 |4          |Horror  |Pulp Beverly|Family Sweet|Swarm Gold            |Drama|Hobbit Alien|Harry Idaho |Witches Panic      |Walter Torn   |Curtain Videotape   |Lies Treatment       |Nightmare Chill       |You've watched 3 Horror films, that's 2 more than the DVD Rental Co average and puts you in the top 8% of Horror gurus!    |You've watched 2 Drama films making up 9% of your entire viewing history!     |You've watched 4 films featuring Walter Torn! Here are some other films Walter stars in that might interest you! |
 |5          |Classics|Timberland Sky|Frost Head  |Gilmore Boiled        |Animation|Juggler Hardly|Dogma Family|Storm Happiness    |Karl Berry    |Virginian Pluto     |Stagecoach Armageddon|Telemark Heartbreakers|You've watched 7 Classics films, that's 5 more than the DVD Rental Co average and puts you in the top 1% of Classics gurus!|You've watched 6 Animation films making up 16% of your entire viewing history!|You've watched 4 films featuring Karl Berry! Here are some other films Karl stars in that might interest you!    |
-
----
-
-## Next Steps
-
-### **Hooray! We have completed the final stage of the data analysis in this project, now let's go back to the main folder to see the final otput of the email template (customer_id = 1)**
-
-<br /> 
-
-View The Final Result: [![View Main Folder](https://img.shields.io/badge/View-Main_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis)
-
-View The 1st Part: [![View Data Exploration Folder](https://img.shields.io/badge/View-Data_Exploration_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/1.-Data-Exploration)
-
-View The 2nd Part: [![View Main FolderData Join Folder](https://img.shields.io/badge/View-Data_Join_Folder-red?)](https://github.com/ndleah/DVD-Rental-Co-Email-Marketing-Analysis/blob/main/2.-Data-Join)
 
 ___________________________________
 
